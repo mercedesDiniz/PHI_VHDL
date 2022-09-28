@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'conta:conta_uni|ckout_s'
+Slack : -2.277
+TNS   : -12.468
+
+Type  : Slow 1100mV 85C Model Setup 'ck'
+Slack : -2.195
+TNS   : -7.812
+
+Type  : Slow 1100mV 85C Model Hold 'ck'
+Slack : 0.311
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'conta:conta_uni|ckout_s'
+Slack : 0.736
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'ck'
+Slack : -0.724
+TNS   : -7.742
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'conta:conta_uni|ckout_s'
+Slack : -0.724
+TNS   : -7.524
+
+Type  : Slow 1100mV 0C Model Setup 'ck'
+Slack : -2.371
+TNS   : -7.909
+
+Type  : Slow 1100mV 0C Model Setup 'conta:conta_uni|ckout_s'
+Slack : -2.277
+TNS   : -12.226
+
+Type  : Slow 1100mV 0C Model Hold 'ck'
+Slack : 0.422
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'conta:conta_uni|ckout_s'
+Slack : 0.757
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'ck'
+Slack : -0.724
+TNS   : -6.888
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'conta:conta_uni|ckout_s'
+Slack : -0.724
+TNS   : -6.887
+
+Type  : Fast 1100mV 85C Model Setup 'conta:conta_uni|ckout_s'
+Slack : -0.516
+TNS   : -2.681
+
+Type  : Fast 1100mV 85C Model Setup 'ck'
+Slack : -0.409
+TNS   : -0.409
+
+Type  : Fast 1100mV 85C Model Hold 'ck'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'conta:conta_uni|ckout_s'
+Slack : 0.364
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'ck'
+Slack : -0.156
+TNS   : -0.460
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'conta:conta_uni|ckout_s'
+Slack : 0.111
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'conta:conta_uni|ckout_s'
+Slack : -0.435
+TNS   : -2.224
+
+Type  : Fast 1100mV 0C Model Setup 'ck'
+Slack : -0.352
+TNS   : -0.352
+
+Type  : Fast 1100mV 0C Model Hold 'ck'
+Slack : 0.169
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'conta:conta_uni|ckout_s'
+Slack : 0.337
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'ck'
+Slack : -0.198
+TNS   : -0.607
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'conta:conta_uni|ckout_s'
+Slack : 0.130
+TNS   : 0.000
+
+------------------------------------------------------------

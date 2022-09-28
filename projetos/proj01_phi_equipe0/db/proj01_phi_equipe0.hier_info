@@ -1,0 +1,83 @@
+|testbench
+
+
+|testbench|main:dut
+A[0] => somador_de_1bit:g1:0:inst_somador_de_1bit.a
+A[1] => somador_de_1bit:g1:1:inst_somador_de_1bit.a
+A[2] => somador_de_1bit:g1:2:inst_somador_de_1bit.a
+A[3] => somador_de_1bit:g1:3:inst_somador_de_1bit.a
+B[0] => seleciona_operacao:inst_seleciona_operacao.input_B[0]
+B[1] => seleciona_operacao:inst_seleciona_operacao.input_B[1]
+B[2] => seleciona_operacao:inst_seleciona_operacao.input_B[2]
+B[3] => seleciona_operacao:inst_seleciona_operacao.input_B[3]
+sel_op => seleciona_operacao:inst_seleciona_operacao.sel_B
+resultado[0] <= somador_de_1bit:g1:0:inst_somador_de_1bit.s
+resultado[1] <= somador_de_1bit:g1:1:inst_somador_de_1bit.s
+resultado[2] <= somador_de_1bit:g1:2:inst_somador_de_1bit.s
+resultado[3] <= somador_de_1bit:g1:3:inst_somador_de_1bit.s
+Cout_msb <= somador_de_1bit:g1:3:inst_somador_de_1bit.cout
+
+
+|testbench|main:dut|somador_de_1bit:\g1:0:inst_somador_de_1bit
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testbench|main:dut|somador_de_1bit:\g1:1:inst_somador_de_1bit
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testbench|main:dut|somador_de_1bit:\g1:2:inst_somador_de_1bit
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testbench|main:dut|somador_de_1bit:\g1:3:inst_somador_de_1bit
+a => s.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|testbench|main:dut|seleciona_operacao:inst_seleciona_operacao
+input_B[0] => B.DATAB
+input_B[1] => B.DATAB
+input_B[2] => B.DATAB
+input_B[3] => B.DATAB
+input_B2[0] => B.DATAA
+input_B2[1] => B.DATAA
+input_B2[2] => B.DATAA
+input_B2[3] => B.DATAA
+sel_B => B.OUTPUTSELECT
+sel_B => B.OUTPUTSELECT
+sel_B => B.OUTPUTSELECT
+sel_B => B.OUTPUTSELECT
+B[0] <= B.DB_MAX_OUTPUT_PORT_TYPE
+B[1] <= B.DB_MAX_OUTPUT_PORT_TYPE
+B[2] <= B.DB_MAX_OUTPUT_PORT_TYPE
+B[3] <= B.DB_MAX_OUTPUT_PORT_TYPE
+
+

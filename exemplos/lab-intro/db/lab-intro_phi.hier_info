@@ -1,0 +1,123 @@
+|contador99_testbench
+
+
+|contador99_testbench|contador99:contador99_inst
+ck => conta:conta_uni.ckin
+hex0[0] <= disp7:disp_uni.disp[0]
+hex0[1] <= disp7:disp_uni.disp[1]
+hex0[2] <= disp7:disp_uni.disp[2]
+hex0[3] <= disp7:disp_uni.disp[3]
+hex0[4] <= disp7:disp_uni.disp[4]
+hex0[5] <= disp7:disp_uni.disp[5]
+hex0[6] <= disp7:disp_uni.disp[6]
+hex1[0] <= disp7:disp_dez.disp[0]
+hex1[1] <= disp7:disp_dez.disp[1]
+hex1[2] <= disp7:disp_dez.disp[2]
+hex1[3] <= disp7:disp_dez.disp[3]
+hex1[4] <= disp7:disp_dez.disp[4]
+hex1[5] <= disp7:disp_dez.disp[5]
+hex1[6] <= disp7:disp_dez.disp[6]
+
+
+|contador99_testbench|contador99:contador99_inst|conta:conta_uni
+ckin => ckout_s.CLK
+ckin => vcont_s[0].CLK
+ckin => vcont_s[1].CLK
+ckin => vcont_s[2].CLK
+ckin => vcont_s[3].CLK
+vcont[0] <= vcont_s[0].DB_MAX_OUTPUT_PORT_TYPE
+vcont[1] <= vcont_s[1].DB_MAX_OUTPUT_PORT_TYPE
+vcont[2] <= vcont_s[2].DB_MAX_OUTPUT_PORT_TYPE
+vcont[3] <= vcont_s[3].DB_MAX_OUTPUT_PORT_TYPE
+ckout <= ckout_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador99_testbench|contador99:contador99_inst|conta:conta_dez
+ckin => ckout_s.CLK
+ckin => vcont_s[0].CLK
+ckin => vcont_s[1].CLK
+ckin => vcont_s[2].CLK
+ckin => vcont_s[3].CLK
+vcont[0] <= vcont_s[0].DB_MAX_OUTPUT_PORT_TYPE
+vcont[1] <= vcont_s[1].DB_MAX_OUTPUT_PORT_TYPE
+vcont[2] <= vcont_s[2].DB_MAX_OUTPUT_PORT_TYPE
+vcont[3] <= vcont_s[3].DB_MAX_OUTPUT_PORT_TYPE
+ckout <= ckout_s.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador99_testbench|contador99:contador99_inst|disp7:disp_uni
+dec[0] => Mux0.IN19
+dec[0] => Mux1.IN19
+dec[0] => Mux2.IN19
+dec[0] => Mux3.IN19
+dec[0] => Mux4.IN19
+dec[0] => Mux5.IN19
+dec[0] => Mux6.IN19
+dec[1] => Mux0.IN18
+dec[1] => Mux1.IN18
+dec[1] => Mux2.IN18
+dec[1] => Mux3.IN18
+dec[1] => Mux4.IN18
+dec[1] => Mux5.IN18
+dec[1] => Mux6.IN18
+dec[2] => Mux0.IN17
+dec[2] => Mux1.IN17
+dec[2] => Mux2.IN17
+dec[2] => Mux3.IN17
+dec[2] => Mux4.IN17
+dec[2] => Mux5.IN17
+dec[2] => Mux6.IN17
+dec[3] => Mux0.IN16
+dec[3] => Mux1.IN16
+dec[3] => Mux2.IN16
+dec[3] => Mux3.IN16
+dec[3] => Mux4.IN16
+dec[3] => Mux5.IN16
+dec[3] => Mux6.IN16
+disp[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+disp[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+disp[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|contador99_testbench|contador99:contador99_inst|disp7:disp_dez
+dec[0] => Mux0.IN19
+dec[0] => Mux1.IN19
+dec[0] => Mux2.IN19
+dec[0] => Mux3.IN19
+dec[0] => Mux4.IN19
+dec[0] => Mux5.IN19
+dec[0] => Mux6.IN19
+dec[1] => Mux0.IN18
+dec[1] => Mux1.IN18
+dec[1] => Mux2.IN18
+dec[1] => Mux3.IN18
+dec[1] => Mux4.IN18
+dec[1] => Mux5.IN18
+dec[1] => Mux6.IN18
+dec[2] => Mux0.IN17
+dec[2] => Mux1.IN17
+dec[2] => Mux2.IN17
+dec[2] => Mux3.IN17
+dec[2] => Mux4.IN17
+dec[2] => Mux5.IN17
+dec[2] => Mux6.IN17
+dec[3] => Mux0.IN16
+dec[3] => Mux1.IN16
+dec[3] => Mux2.IN16
+dec[3] => Mux3.IN16
+dec[3] => Mux4.IN16
+dec[3] => Mux5.IN16
+dec[3] => Mux6.IN16
+disp[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+disp[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+disp[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+disp[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+disp[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+disp[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+disp[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

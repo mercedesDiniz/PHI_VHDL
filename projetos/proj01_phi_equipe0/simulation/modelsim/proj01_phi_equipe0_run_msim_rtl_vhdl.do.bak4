@@ -1,0 +1,13 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vcom -93 -work work {C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/proj01_phi_equipe0/somador_de_1bit.vhd}
+vcom -93 -work work {C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/proj01_phi_equipe0/complemento_de_2.vhd}
+vcom -93 -work work {C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/proj01_phi_equipe0/seleciona_operacao.vhd}
+vcom -93 -work work {C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/proj01_phi_equipe0/main.vhd}
+vcom -93 -work work {C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/proj01_phi_equipe0/testbench.vhd}
+
