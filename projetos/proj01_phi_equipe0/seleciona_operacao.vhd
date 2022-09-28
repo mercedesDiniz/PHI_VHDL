@@ -10,13 +10,14 @@ entity seleciona_operacao is 										-- Declaracao da entidade
 		nbits   :   integer := 4					-- número de bits
 	);
 	port(
-		input_B, input_B2: in std_logic_vector(nbits-1 downto 0);			-- Entradas
+		input_B: in std_logic_vector (nbits-1 downto 0);			-- Entradas
 		sel_B : in std_logic;													-- Seleciona a entrada
-		B : out std_logic_vector(nbits-1 downto 0)					-- Saidas
+		B : out std_logic_vector (nbits-1 downto 0)					-- Saidas
 	);	
 end seleciona_operacao;								
 	
 architecture comportamento of seleciona_operacao is		-- Declaracao da arquitetura
-begin															
-	B <= input_B when sel_B='0' else std_logic_vector(unsigned(input_B2));		
+	constant one : unsigned(B'RANGE) := (0 => '1', others => '0'); -- Cria um vetor do mesmo tamanho que B com o bit menos significativo igual a  1
+begin	
+	B <= input_B when sel_B='0' else std_logic_vector(unsigned (not input_B) + one);	
 end comportamento;

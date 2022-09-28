@@ -29,7 +29,7 @@ architecture comportamento of main is
 	-- Declarando o componente seleciona_operacao
 	component seleciona_operacao is
 		port(
-			input_B, input_B2: in std_logic_vector(nbits-1 downto 0);			-- Entradas
+			input_B: in std_logic_vector(nbits-1 downto 0);			-- Entradas
 			sel_B : in std_logic;															-- Seleciona a entrada
 			B : out std_logic_vector(nbits-1 downto 0)								-- Saidas
 		);
@@ -63,7 +63,6 @@ begin
 	inst_seleciona_operacao: seleciona_operacao
 		port map(
 			input_B => B,
-			input_B2 => saidaB2,
 			sel_B => sel_op,
 			B => entradaBEscolhida
 		);

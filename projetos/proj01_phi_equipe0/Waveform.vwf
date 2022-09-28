@@ -1,8 +1,8 @@
 /*<simulation_settings>
-<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proj01_phi_equipe0 -c proj01_phi_equipe0 --vector_source="C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/proj01_phi_equipe0/Waveform.vwf" --testbench_file="C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/proj01_phi_equipe0/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
-<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proj01_phi_equipe0 -c proj01_phi_equipe0 --vector_source="C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/proj01_phi_equipe0/Waveform.vwf" --testbench_file="C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/proj01_phi_equipe0/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
-<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/proj01_phi_equipe0/simulation/qsim/" proj01_phi_equipe0 -c proj01_phi_equipe0</fnetlist_cmd>
-<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/proj01_phi_equipe0/simulation/qsim/" proj01_phi_equipe0 -c proj01_phi_equipe0</tnetlist_cmd>
+<ftestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proj01_phi_equipe0 -c proj01_phi_equipe0 --vector_source="C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj01_phi_equipe0/Waveform.vwf" --testbench_file="C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj01_phi_equipe0/simulation/qsim/Waveform.vwf.vht"</ftestbench_cmd>
+<ttestbench_cmd>quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off proj01_phi_equipe0 -c proj01_phi_equipe0 --vector_source="C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj01_phi_equipe0/Waveform.vwf" --testbench_file="C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj01_phi_equipe0/simulation/qsim/Waveform.vwf.vht"</ttestbench_cmd>
+<fnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj01_phi_equipe0/simulation/qsim/" proj01_phi_equipe0 -c proj01_phi_equipe0</fnetlist_cmd>
+<tnetlist_cmd>quartus_eda --write_settings_files=off --simulation --functional=off --flatten_buses=off --timescale=1ps --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj01_phi_equipe0/simulation/qsim/" proj01_phi_equipe0 -c proj01_phi_equipe0</tnetlist_cmd>
 <modelsim_script>onerror {exit -code 1}
 vlib work
 vcom -work work proj01_phi_equipe0.vho
@@ -20,7 +20,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
 </modelsim_script>
 <modelsim_script_timing>onerror {exit -code 1}
 vlib work
@@ -39,7 +38,6 @@ proc simTimestamp {} {
 after 2500 simTimestamp
 run -all
 quit -f
-
 </modelsim_script_timing>
 <hdl_lang>vhdl</hdl_lang>
 </simulation_settings>*/
@@ -176,6 +174,16 @@ SIGNAL("B[0]")
 	LSB_INDEX = -1;
 	DIRECTION = INPUT;
 	PARENT = "B";
+}
+
+SIGNAL("Cout_msb")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
 }
 
 SIGNAL("resultado")
@@ -318,12 +326,7 @@ TRANSITION_LIST("B[1]")
 	NODE
 	{
 		REPEAT = 1;
-		NODE
-		{
-			REPEAT = 25;
-			LEVEL 0 FOR 20.0;
-			LEVEL 1 FOR 20.0;
-		}
+		LEVEL 0 FOR 1000.0;
 	}
 }
 
@@ -332,7 +335,22 @@ TRANSITION_LIST("B[0]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 1000.0;
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 0 FOR 40.0;
+			LEVEL 1 FOR 40.0;
+		}
+		LEVEL 0 FOR 40.0;
+	}
+}
+
+TRANSITION_LIST("Cout_msb")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL X FOR 1000.0;
 	}
 }
 
@@ -379,11 +397,10 @@ TRANSITION_LIST("sel_op")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 12;
-			LEVEL 0 FOR 40.0;
-			LEVEL 1 FOR 40.0;
+			REPEAT = 25;
+			LEVEL 0 FOR 20.0;
+			LEVEL 1 FOR 20.0;
 		}
-		LEVEL 0 FOR 40.0;
 	}
 }
 
@@ -489,7 +506,7 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "sel_op";
+	CHANNEL = "Cout_msb";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 10;
@@ -498,12 +515,21 @@ DISPLAY_LINE
 
 DISPLAY_LINE
 {
-	CHANNEL = "resultado";
+	CHANNEL = "sel_op";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
 	TREE_INDEX = 11;
 	TREE_LEVEL = 0;
-	CHILDREN = 12, 13, 14, 15;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "resultado";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 0;
+	CHILDREN = 13, 14, 15, 16;
 }
 
 DISPLAY_LINE
@@ -511,9 +537,9 @@ DISPLAY_LINE
 	CHANNEL = "resultado[3]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 12;
+	TREE_INDEX = 13;
 	TREE_LEVEL = 1;
-	PARENT = 11;
+	PARENT = 12;
 }
 
 DISPLAY_LINE
@@ -521,9 +547,9 @@ DISPLAY_LINE
 	CHANNEL = "resultado[2]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 13;
+	TREE_INDEX = 14;
 	TREE_LEVEL = 1;
-	PARENT = 11;
+	PARENT = 12;
 }
 
 DISPLAY_LINE
@@ -531,9 +557,9 @@ DISPLAY_LINE
 	CHANNEL = "resultado[1]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 14;
+	TREE_INDEX = 15;
 	TREE_LEVEL = 1;
-	PARENT = 11;
+	PARENT = 12;
 }
 
 DISPLAY_LINE
@@ -541,9 +567,9 @@ DISPLAY_LINE
 	CHANNEL = "resultado[0]";
 	EXPAND_STATUS = COLLAPSED;
 	RADIX = Binary;
-	TREE_INDEX = 15;
+	TREE_INDEX = 16;
 	TREE_LEVEL = 1;
-	PARENT = 11;
+	PARENT = 12;
 }
 
 TIME_BAR
