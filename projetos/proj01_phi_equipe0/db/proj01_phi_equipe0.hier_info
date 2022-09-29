@@ -64,13 +64,13 @@ cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 |testbench|main:dut|seleciona_operacao:inst_seleciona_operacao
 input_B[0] => B.DATAB
+input_B[0] => Add0.IN8
 input_B[1] => B.DATAB
+input_B[1] => Add0.IN7
 input_B[2] => B.DATAB
+input_B[2] => Add0.IN6
 input_B[3] => B.DATAB
-input_B2[0] => B.DATAA
-input_B2[1] => B.DATAA
-input_B2[2] => B.DATAA
-input_B2[3] => B.DATAA
+input_B[3] => Add0.IN5
 sel_B => B.OUTPUTSELECT
 sel_B => B.OUTPUTSELECT
 sel_B => B.OUTPUTSELECT

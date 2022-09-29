@@ -55,8 +55,7 @@ begin
 				s => resultado(i),
 				cout => Cout_somadores(i+1)
 			);
-		-- Instanciando os blocos do complemento_de_2
-		
+			
 	end generate g1;
 	
 	-- Instanciando os blocos do seleciona_operacao
@@ -69,5 +68,4 @@ begin
 		
 	Cout_msb <= Cout_somadores(nbits);  -- salvando o Cout mais significativo
 	
-
 end comportamento;

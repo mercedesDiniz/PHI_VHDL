@@ -40,6 +40,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "sel_op",
+					"strict" : false
+				},
+				{
 					"name" : "A[2]",
 					"strict" : false
 				},

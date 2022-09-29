@@ -17,7 +17,12 @@ entity seleciona_operacao is 										-- Declaracao da entidade
 end seleciona_operacao;								
 	
 architecture comportamento of seleciona_operacao is		-- Declaracao da arquitetura
-	constant one : unsigned(B'RANGE) := (0 => '1', others => '0'); -- Cria um vetor do mesmo tamanho que B com o bit menos significativo igual a  1
+	-- Cria um vetor do mesmo tamanho que B com o bit menos significativo igual a  1:
+	constant one : unsigned(B'RANGE) := (0 => '1', others => '0'); 
+	
 begin	
+	-- Atribui o valor de B de acordo com a seleção (0 = mantem o valor | 1 = atribui o compçemento de 2)
+	-- calculo do complemento de 2: inverte os bits de B e soma 1
+	
 	B <= input_B when sel_B='0' else std_logic_vector(unsigned (not input_B) + one);	
 end comportamento;

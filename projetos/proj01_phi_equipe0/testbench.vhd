@@ -10,7 +10,6 @@ entity testbench is
 end testbench;
 
 architecture test of testbench is
-
 	-- Declarando o componente main
 	component main is
 		generic(
@@ -59,7 +58,7 @@ begin
 	
 	-- Processo 02: ler os valores das entradas A e B do arquivo de texto e atribui para os respctivos inputs
 	lendo_entradas: process (clock)
-		file F: TEXT open READ_MODE is "C:\Users\Mercedes\Desktop\proj01v2_phi_equipe0\arq_entrada_saida\entradas.txt";
+		file F: TEXT open READ_MODE is "C:\Users\Mercedes\QuartusLite\Projetos\PHI_VHDL\projetos\proj01_phi_equipe0\arq_entrada_saida\entradas.txt";
 		variable L: LINE;
 		variable entrada : integer;
 	begin
@@ -79,7 +78,7 @@ begin
 	
 	-- Processo 03: escreve o resultado e qual foi a respectiva operação no arquivo de texto
 	armazenando_resultados: process (clock)
-		file F: TEXT open WRITE_MODE is "C:\Users\Mercedes\Desktop\proj01v2_phi_equipe0\arq_entrada_saida\saida.txt";
+		file F: TEXT open WRITE_MODE is "C:\Users\Mercedes\QuartusLite\Projetos\PHI_VHDL\projetos\proj01_phi_equipe0\arq_entrada_saida\saida.txt";
 		variable L: LINE;
 	begin
 		if rising_edge(clock) then
