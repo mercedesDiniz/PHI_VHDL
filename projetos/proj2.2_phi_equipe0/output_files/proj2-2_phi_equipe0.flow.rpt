@@ -1,5 +1,5 @@
 Flow report for proj2-2_phi_equipe0
-Sat Oct 08 18:12:17 2022
+Sat Oct 08 18:33:01 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,29 +38,24 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Oct 08 18:12:17 2022       ;
-; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
-; Revision Name                   ; proj2-2_phi_equipe0                         ;
-; Top-level Entity Name           ; sel_mostrador_relogio                       ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CGXFC7C7F23C8                              ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 4 / 56,480 ( < 1 % )                        ;
-; Total registers                 ; 5                                           ;
-; Total pins                      ; 5 / 268 ( 2 % )                             ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 7,024,640 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 156 ( 0 % )                             ;
-; Total HSSI RX PCSs              ; 0 / 6 ( 0 % )                               ;
-; Total HSSI PMA RX Deserializers ; 0 / 6 ( 0 % )                               ;
-; Total HSSI TX PCSs              ; 0 / 6 ( 0 % )                               ;
-; Total HSSI PMA TX Serializers   ; 0 / 6 ( 0 % )                               ;
-; Total PLLs                      ; 0 / 13 ( 0 % )                              ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Flow Summary                                                              ;
++-----------------------------+---------------------------------------------+
+; Flow Status                 ; Successful - Sat Oct 08 18:33:01 2022       ;
+; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name               ; proj2-2_phi_equipe0                         ;
+; Top-level Entity Name       ; sel_mostrador_relogio                       ;
+; Family                      ; Cyclone V                                   ;
+; Device                      ; 5CGXFC7C7F23C8                              ;
+; Timing Models               ; Final                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -68,7 +63,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/08/2022 18:11:26 ;
+; Start date & time ; 10/08/2022 18:32:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; proj2-2_phi_equipe0 ;
 +-------------------+---------------------+
@@ -79,7 +74,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------------+-----------------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value       ; Entity Name           ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------------+-----------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 251413962923800.166526348609856        ; --                  ; --                    ; --             ;
+; COMPILER_SIGNATURE_ID               ; 251413962923800.166526477312464        ; --                  ; --                    ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --                  ; --                    ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>              ; --                    ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --                  ; --                    ; eda_simulation ;
@@ -93,41 +88,29 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+---------------------+-----------------------+----------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                             ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 4843 MB             ; 00:00:22                           ;
-; Fitter                    ; 00:00:26     ; 1.0                     ; 6659 MB             ; 00:00:53                           ;
-; Assembler                 ; 00:00:06     ; 1.0                     ; 4818 MB             ; 00:00:07                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 5139 MB             ; 00:00:04                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4726 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:47     ; --                      ; --                  ; 00:01:27                           ;
-+---------------------------+--------------+-------------------------+---------------------+------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:08     ; 1.0                     ; 4836 MB             ; 00:00:20                           ;
+; Total                  ; 00:00:08     ; --                      ; --                  ; 00:00:20                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                         ;
-+---------------------------+------------------+------------+------------+----------------+
-; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+---------------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-46KGFII  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter                    ; DESKTOP-46KGFII  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler                 ; DESKTOP-46KGFII  ; Windows 10 ; 10.0       ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-46KGFII  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-46KGFII  ; Windows 10 ; 10.0       ; x86_64         ;
-+---------------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++------------------------+------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++------------------------+------------------+------------+------------+----------------+
+; Analysis & Elaboration ; DESKTOP-46KGFII  ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off proj2-2_phi_equipe0 -c proj2-2_phi_equipe0
-quartus_fit --read_settings_files=off --write_settings_files=off proj2-2_phi_equipe0 -c proj2-2_phi_equipe0
-quartus_asm --read_settings_files=off --write_settings_files=off proj2-2_phi_equipe0 -c proj2-2_phi_equipe0
-quartus_sta proj2-2_phi_equipe0 -c proj2-2_phi_equipe0
-quartus_eda --read_settings_files=off --write_settings_files=off proj2-2_phi_equipe0 -c proj2-2_phi_equipe0
+quartus_map --read_settings_files=on --write_settings_files=off proj2-2_phi_equipe0 -c proj2-2_phi_equipe0 --analysis_and_elaboration
 
 
 
