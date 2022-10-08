@@ -1,0 +1,9 @@
+|fsm_aula1_6
+clk => estado~1.DATAIN
+rst => estado~3.DATAIN
+w => prox_estado.B.DATAB
+w => prox_estado.C.DATAA
+w => estado.A.DATAIN
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
