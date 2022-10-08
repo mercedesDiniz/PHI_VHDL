@@ -1,0 +1,7 @@
+
+State Machine - |sel_mostrador_relogio|estado_atual
+Name estado_atual.D estado_atual.C estado_atual.A estado_atual.H 
+estado_atual.H 0 0 0 0 
+estado_atual.A 0 0 1 1 
+estado_atual.C 0 1 0 1 
+estado_atual.D 1 0 0 1 
