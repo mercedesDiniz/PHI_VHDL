@@ -1,5 +1,6 @@
 vendor_name = ModelSim
 source_file = 1, C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj2.2_phi_equipe0/sel_mostrador_relogio.vhd
+source_file = 1, C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj2.2_phi_equipe0/testbench.vhd
 source_file = 1, c:/intelfpga_lite/17.0/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
 source_file = 1, c:/intelfpga_lite/17.0/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
 source_file = 1, c:/intelfpga_lite/17.0/quartus/libraries/vhdl/ieee/timing_b.vhd

@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition"
 
--- DATE "10/08/2022 18:12:17"
+-- DATE "10/09/2022 13:54:11"
 
 -- 
 -- Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -41,8 +41,8 @@ ENTITY 	sel_mostrador_relogio IS
 	clk : IN std_logic;
 	rst : IN std_logic;
 	b : IN std_logic;
-	s0 : OUT std_logic;
-	s1 : OUT std_logic
+	s0 : BUFFER std_logic;
+	s1 : BUFFER std_logic
 	);
 END sel_mostrador_relogio;
 

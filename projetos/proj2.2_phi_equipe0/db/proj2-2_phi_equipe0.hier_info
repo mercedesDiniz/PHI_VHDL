@@ -1,11 +1,14 @@
-|sel_mostrador_relogio
+|testbench
+
+
+|testbench|sel_mostrador_relogio:inst_selMostradorRelogio
 clk => b_anterior.CLK
 clk => estado_atual~1.DATAIN
 rst => estado_atual~3.DATAIN
 rst => b_anterior.ENA
 b => logica_proximo_estado.IN1
 b => b_anterior.DATAIN
-s0 << s0.DB_MAX_OUTPUT_PORT_TYPE
-s1 << s1.DB_MAX_OUTPUT_PORT_TYPE
+s0 <= s0.DB_MAX_OUTPUT_PORT_TYPE
+s1 <= s1.DB_MAX_OUTPUT_PORT_TYPE
 
 

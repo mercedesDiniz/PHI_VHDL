@@ -1,5 +1,5 @@
 Flow report for proj2-2_phi_equipe0
-Sat Oct 08 18:33:01 2022
+Sun Oct 09 14:04:41 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,10 +41,10 @@ agreement for further details.
 +---------------------------------------------------------------------------+
 ; Flow Summary                                                              ;
 +-----------------------------+---------------------------------------------+
-; Flow Status                 ; Successful - Sat Oct 08 18:33:01 2022       ;
+; Flow Status                 ; Successful - Sun Oct 09 14:04:41 2022       ;
 ; Quartus Prime Version       ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name               ; proj2-2_phi_equipe0                         ;
-; Top-level Entity Name       ; sel_mostrador_relogio                       ;
+; Top-level Entity Name       ; testbench                                   ;
 ; Family                      ; Cyclone V                                   ;
 ; Device                      ; 5CGXFC7C7F23C8                              ;
 ; Timing Models               ; Final                                       ;
@@ -63,29 +63,29 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/08/2022 18:32:53 ;
+; Start date & time ; 10/09/2022 14:04:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; proj2-2_phi_equipe0 ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                            ;
-+-------------------------------------+----------------------------------------+---------------------+-----------------------+----------------+
-; Assignment Name                     ; Value                                  ; Default Value       ; Entity Name           ; Section Id     ;
-+-------------------------------------+----------------------------------------+---------------------+-----------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 251413962923800.166526477312464        ; --                  ; --                    ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --                  ; --                    ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>              ; --                    ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                   ; --                  ; --                    ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                  ; --                    ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                  ; --                    ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                  ; sel_mostrador_relogio ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                  ; sel_mostrador_relogio ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                  ; sel_mostrador_relogio ; Top            ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                  ; --                    ; --             ;
-; TOP_LEVEL_ENTITY                    ; sel_mostrador_relogio                  ; proj2-2_phi_equipe0 ; --                    ; --             ;
-+-------------------------------------+----------------------------------------+---------------------+-----------------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                  ;
++-------------------------------------+----------------------------------------+---------------------+-------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value       ; Entity Name ; Section Id     ;
++-------------------------------------+----------------------------------------+---------------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 251413962923800.166533507211804        ; --                  ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --                  ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>              ; --          ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --                  ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                  ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                  ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                  ; testbench   ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                  ; testbench   ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                  ; testbench   ; Top            ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                  ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; testbench                              ; proj2-2_phi_equipe0 ; --          ; --             ;
++-------------------------------------+----------------------------------------+---------------------+-------------+----------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------+
@@ -93,8 +93,8 @@ agreement for further details.
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:08     ; 1.0                     ; 4836 MB             ; 00:00:20                           ;
-; Total                  ; 00:00:08     ; --                      ; --                  ; 00:00:20                           ;
+; Analysis & Elaboration ; 00:00:09     ; 1.0                     ; 4838 MB             ; 00:00:21                           ;
+; Total                  ; 00:00:09     ; --                      ; --                  ; 00:00:21                           ;
 +------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

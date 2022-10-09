@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Sat Oct 08 18:33:01 2022
+Analysis & Elaboration Status : Successful - Sun Oct 09 14:04:41 2022
 Quartus Prime Version : 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 Revision Name : proj2-2_phi_equipe0
-Top-level Entity Name : sel_mostrador_relogio
+Top-level Entity Name : testbench
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A until Partition Merge
 Total registers : N/A until Partition Merge
