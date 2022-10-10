@@ -61,6 +61,6 @@ begin
 	end process;
 	
 	clk <= not clk after 5ns;
-	rst <= '0' after 1us;
+	rst <= '0' after 20ns;
 	
 end comportamento;

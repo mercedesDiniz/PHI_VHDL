@@ -18,6 +18,7 @@ architecture comportamento of controle_portao  is
 	-- Região de declaração:
 	type tipo_estado is (Aberto, Pause_AF, Fechado, Pause_FA); -- Estados possiveis
 	signal prox_estado, estado_atual : tipo_estado := Fechado;
+	signal b_anterior : std_logic := '0';		-- Variavel auxiliar (buffer do valor de b)
 	
 	-- sinalizadores de fins de curso  (*****obs.: ainda n sei oq fazer com isso)
 	signal fc1 ,fc2 : std_logic := '0';	-- do processo de Abertura (fc1) e Fechamento (fc2) 
@@ -25,11 +26,11 @@ architecture comportamento of controle_portao  is
 begin -- Descrição do sistema
 
 	-- Circuito combinacional -> não depende de clock
-	logica_proximo_estado : process(estado_atual, b, p)
+	logica_proximo_estado : process(estado_atual, b, b_anterior, p)
 	begin
 		case estado_atual is
 			when Fechado =>
-				if p = '0' and b = '1' then
+				if p = '0' and b = '1' and b_anterior = '0' then
 					prox_estado <= Aberto;
 				elsif	p = '1' and b = '1' then
 					prox_estado <= Pause_FA;
@@ -45,7 +46,7 @@ begin -- Descrição do sistema
 				end if;	
 			
 			when Aberto =>
-				if p = '0' and b = '1' then
+				if p = '0' and b = '1' and b_anterior = '0' then
 					prox_estado <= Fechado;
 				elsif	p = '1' and b = '1' then
 					prox_estado <= Pause_AF;
@@ -69,6 +70,7 @@ begin -- Descrição do sistema
 			estado_atual <= Fechado;
 		elsif rising_edge(clk) then
 			estado_atual <= prox_estado;  -- Vai p/ o proximo estado
+			b_anterior <= b;					-- Armazena o valor de b
 		end if;
 	end process;
 	
