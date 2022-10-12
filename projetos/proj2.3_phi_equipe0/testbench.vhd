@@ -9,17 +9,19 @@ architecture comportamento of testbench is
 	-- Declaração do componente controle_portao
 	component controle_portao
 	port(
-		clk, rst, b, p: in std_logic;		-- b => Indica o comando do botão | p => Sinalizador de presença
+		clk, rst, b, p, fc1, fc2 : in std_logic;		-- b => Indica o comando do botão | p => Sinalizador de presença
 		s0, s1 : out std_logic
 	);
 	end component;
 	
 	-- Declaração das constantes e variaveis 
-	signal clk, b, p, s0, s1 : std_logic := '0';
+	signal clk, b, p, s0, s1, fc1, fc2 : std_logic := '0';
 	signal rst : std_logic := '1';
 	
 	constant b_valores : std_logic_vector(0 to 54) := "0101010101000001111111111011111111011000001111001100111";
 	constant p_valores : std_logic_vector(0 to 54) := "1101001101010101111110000001110101010000110101010101010";
+	constant fc1_valores : std_logic_vector(0 to 54) := "0110111011010111101111011011111011111010100110010110111";
+	constant fc2_valores : std_logic_vector(0 to 54) := "0001111001001011100111101011101000101001010101110101101";
 	
 begin 
 	-- Instanciando do componente controle_portao
@@ -30,31 +32,31 @@ begin
 		b => b,
 		p => p,
 		s0 => s0,
-		s1 => s1
+		s1 => s1,
+		fc1 => fc1,
+		fc2 => fc2
 	);
 	
 	-- processo p/ gerar as entradas
 	gerador_entrada: process(clk, rst)
-		variable i, j : integer := 0;
+		variable i : integer := 0;
 	begin
 		if rst = '1' then
 			i := 0;
-			j := 0;
 			b <= b_valores(i);
-			p <= p_valores(j);
+			p <= p_valores(i);
+			fc1 <= fc1_valores(i);
+			fc2 <= fc2_valores(i);
 		elsif rising_edge(clk) then
 			b <= b_valores(i);
-			p <= p_valores(j);
+			p <= p_valores(i);
+			fc1 <= fc1_valores(i);
+			fc2 <= fc2_valores(i);
 			
 			i := i + 1;
-			j := j + 1;
 			
-			if i = b_valores'length then
+			if i = b_valores'length then    			--Todos os vetores devem ser do mesmo tamanho para a lógica estar correta
 				i := 0;
-			end if;
-			
-			if j = p_valores'length then
-				j := 0;
 			end if;
 			
 		end if;	

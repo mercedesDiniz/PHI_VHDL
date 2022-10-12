@@ -9,7 +9,7 @@ use IEEE.STD_LOGIC_1164.all;
 entity controle_portao is
 	-- Definindo as portas de entrada e saida
 	port(
-		clk, rst, b, p: in std_logic;		-- b => Indica o comando do botão | p => Sinalizador de presença
+		clk, rst, b, p, fc1, fc2 : in std_logic;		-- b => Indica o comando do botão | p => Sinalizador de presença
 		s0, s1 : out std_logic
 	);
 end controle_portao;
@@ -21,7 +21,7 @@ architecture comportamento of controle_portao  is
 	signal b_anterior : std_logic := '0';		-- Variavel auxiliar (buffer do valor de b)
 	
 	-- sinalizadores de fins de curso  (*****obs.: ainda n sei oq fazer com isso)
-	signal fc1 ,fc2 : std_logic := '0';	-- do processo de Abertura (fc1) e Fechamento (fc2) 
+	--signal fc1 ,fc2 : std_logic := '0';	-- do processo de Abertura (fc1) e Fechamento (fc2) 
 	
 begin -- Descrição do sistema
 
@@ -30,32 +30,32 @@ begin -- Descrição do sistema
 	begin
 		case estado_atual is
 			when Fechado =>
-				if p = '0' and b = '1' and b_anterior = '0' then
+				if p = '0' and b = '1' and b_anterior = '0' and fc1 ='1'then
 					prox_estado <= Aberto;
-				elsif	p = '1' and b = '1' then
+				elsif	p = '1' and b = '1' and fc1 ='0' then
 					prox_estado <= Pause_FA;
 				else 
 					prox_estado <= Fechado;
 				end if;
 				
 			when Pause_FA =>
-				if p = '0' then
+				if p = '0'  and fc1 ='0' then
 					prox_estado <= Aberto;
 				else
 					prox_estado <= Pause_FA;
 				end if;	
 			
 			when Aberto =>
-				if p = '0' and b = '1' and b_anterior = '0' then
+				if p = '0' and b = '1' and b_anterior = '0' and fc2='1' then
 					prox_estado <= Fechado;
-				elsif	p = '1' and b = '1' then
+				elsif	p = '1' and b = '1' and fc2='0' then
 					prox_estado <= Pause_AF;
 				else 
 					prox_estado <= Aberto;
 				end if;
 				
 			when Pause_AF =>
-				if p = '0' then
+				if p = '0' and fc2='0' then
 					prox_estado <= Fechado;
 				else
 					prox_estado <= Pause_AF;
@@ -81,19 +81,15 @@ begin -- Descrição do sistema
 			when Fechado => 
 				s0 <= '0';
 				s1 <= '1';
-				fc1 <= '0';
-				fc2 <= '1';
 			when Pause_FA => 
 				s0 <= '0';
 				s1 <= '0';
 			when Aberto =>
 				s0 <= '1';
 				s1 <= '0';
-				fc1 <= '1';
-				fc2 <= '0';
 			when Pause_AF => 
-				s0 <= '1';
-				s1 <= '1';
+				s0 <= '0';
+				s1 <= '0';
 		end case;
 	end process;
 	
