@@ -23,52 +23,52 @@ architecture comportamento of controle_portao  is
 begin -- Descrição do sistema
 
 	-- Circuito combinacional -> não depende de clock
-	logica_proximo_estado : process(estado_atual, b, b_anterior, p)
+	logica_proximo_estado : process(estado_atual, b, b_anterior, p, fc1, fc2)
 	begin
 		case estado_atual is
 			when Fechando =>
-				if p = '0' and fc1 = '0' and fc2 = '0' then
-					prox_estado <= Fechando;
-				elsif	p = '1' and fc1 = '0' and fc2 = '0'then
+				if	p = '1' and fc1 = '0'then
 					prox_estado <= BloqueadoF;
-				elsif fc1 = '1' and fc2 = '0' then
+				elsif fc1 = '1' then
 					prox_estado <= Fechado;
+				else 
+					prox_estado <= Fechando;
 				end if;
 				
 			when BloqueadoF =>
-				if p = '0' and fc1 = '0' and fc2 = '0' then
+				if p = '0' and fc1 = '0' then
 					prox_estado <= Fechando;
-				elsif p = '1' and fc1 = '0' and fc2 = '0' then
+				else
 					prox_estado <= BloqueadoF;
 				end if;	
 			
 			when Fechado =>
-				if b = '1' and b_anterior = '0' and fc1 = '0' and fc2 = '0' then
+				if b = '1' and b_anterior = '0' and fc1 = '0'then
 					prox_estado <= Abrindo;
-				elsif fc1 = '1' and fc2 = '0' then
+				else
 					prox_estado <= Fechado;
 				end if;
 			
 			when Abrindo =>
-				if p = '0' and fc1 = '0' and fc2 = '0' then
-					prox_estado <= Abrindo;
-				elsif	p = '1' and fc1 = '0' and fc2 = '0' then
+				 if	p = '1' and fc2 = '0' then
 					prox_estado <= BloqueadoA;
-				elsif fc1 = '0' and fc2 = '1' then
+				elsif fc2 = '1' then
 					prox_estado <= Aberto;
+				else 
+					prox_estado <= Abrindo;
 				end if;
 				
 			when BloqueadoA =>
-				if p = '0' and fc1 = '0' and fc2 = '0' then
+				if p = '0' and fc2 = '0' then
 					prox_estado <= Abrindo;
-				elsif p = '1' and fc1 = '0' and fc2 = '0' then
+				else
 					prox_estado <= BloqueadoA;
 				end if;	
 			
 			when Aberto =>
-				if b = '1' and b_anterior = '0' and fc1 = '0' and fc2 = '0'then
+				if b = '1' and b_anterior = '0' and fc2 = '0'then
 					prox_estado <= Fechando;
-				elsif fc1 = '0' and fc2 = '1' then
+				else
 					prox_estado <= Aberto;
 				end if;
 
