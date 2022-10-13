@@ -8,58 +8,70 @@ use IEEE.STD_LOGIC_1164.all;
 
 entity controle_portao is
 	-- Definindo as portas de entrada e saida
-	port(
-		clk, rst, b, p, fc1, fc2 : in std_logic;		-- b => Indica o comando do botão | p => Sinalizador de presença
+	port(															-- sinalizadores de fins de curso: fc1,fc2 => 10 = fechado | 01= aberto
+		clk, rst, fc1 ,fc2, b, p: in std_logic;		-- b => Indica o comando do botão | p => Sinalizador de presença
 		s0, s1 : out std_logic
 	);
 end controle_portao;
 
 architecture comportamento of controle_portao  is 
 	-- Região de declaração:
-	type tipo_estado is (Aberto, Pause_AF, Fechado, Pause_FA); -- Estados possiveis
-	signal prox_estado, estado_atual : tipo_estado := Fechado;
+	type tipo_estado is (Abrindo, Aberto,BloqueadoA, Fechando, Fechado, BloqueadoF); -- Estados possiveis
+	signal prox_estado, estado_atual : tipo_estado := Fechando;
 	signal b_anterior : std_logic := '0';		-- Variavel auxiliar (buffer do valor de b)
-	
-	-- sinalizadores de fins de curso  (*****obs.: ainda n sei oq fazer com isso)
-	--signal fc1 ,fc2 : std_logic := '0';	-- do processo de Abertura (fc1) e Fechamento (fc2) 
 	
 begin -- Descrição do sistema
 
 	-- Circuito combinacional -> não depende de clock
-	logica_proximo_estado : process(estado_atual, b, b_anterior, p)
+	logica_proximo_estado : process(estado_atual, b, b_anterior, p, fc1, fc2)
 	begin
 		case estado_atual is
-			when Fechado =>
-				if p = '0' and b = '1' and b_anterior = '0' and fc1 ='1'then
-					prox_estado <= Aberto;
-				elsif	p = '1' and b = '1' and fc1 ='0' then
-					prox_estado <= Pause_FA;
-				else 
+			when Fechando =>
+				if	p = '1' and fc1 = '0'then
+					prox_estado <= BloqueadoF;
+				elsif fc1 = '1' then
 					prox_estado <= Fechado;
+				else 
+					prox_estado <= Fechando;
 				end if;
 				
-			when Pause_FA =>
-				if p = '0'  and fc1 ='0' then
-					prox_estado <= Aberto;
+			when BloqueadoF =>
+				if p = '0' and fc1 = '0' then
+					prox_estado <= Fechando;
 				else
-					prox_estado <= Pause_FA;
+					prox_estado <= BloqueadoF;
+				end if;	
+			
+			when Fechado =>
+				if b = '1' and b_anterior = '0' and fc1 = '0'then
+					prox_estado <= Abrindo;
+				else
+					prox_estado <= Fechado;
+				end if;
+			
+			when Abrindo =>
+				 if	p = '1' and fc2 = '0' then
+					prox_estado <= BloqueadoA;
+				elsif fc2 = '1' then
+					prox_estado <= Aberto;
+				else 
+					prox_estado <= Abrindo;
+				end if;
+				
+			when BloqueadoA =>
+				if p = '0' and fc2 = '0' then
+					prox_estado <= Abrindo;
+				else
+					prox_estado <= BloqueadoA;
 				end if;	
 			
 			when Aberto =>
-				if p = '0' and b = '1' and b_anterior = '0' and fc2='1' then
-					prox_estado <= Fechado;
-				elsif	p = '1' and b = '1' and fc2='0' then
-					prox_estado <= Pause_AF;
-				else 
+				if b = '1' and b_anterior = '0' and fc2 = '0'then
+					prox_estado <= Fechando;
+				else
 					prox_estado <= Aberto;
 				end if;
-				
-			when Pause_AF =>
-				if p = '0' and fc2='0' then
-					prox_estado <= Fechado;
-				else
-					prox_estado <= Pause_AF;
-				end if;
+
 				
 		end case;
 	end process;
@@ -67,7 +79,7 @@ begin -- Descrição do sistema
 	registrador_estado : process(clk,rst)
 	begin
 		if rst = '1' then
-			estado_atual <= Fechado;
+			estado_atual <= Fechando;
 		elsif rising_edge(clk) then
 			estado_atual <= prox_estado;  -- Vai p/ o proximo estado
 			b_anterior <= b;					-- Armazena o valor de b
@@ -78,18 +90,29 @@ begin -- Descrição do sistema
 	logica_saida : process(estado_atual)
 	begin
 		case estado_atual is
-			when Fechado => 
-				s0 <= '0';
-				s1 <= '1';
-			when Pause_FA => 
-				s0 <= '0';
-				s1 <= '0';
-			when Aberto =>
+			when Fechando => 
 				s0 <= '1';
 				s1 <= '0';
-			when Pause_AF => 
+			
+			when Abrindo => 
+				s0 <= '0';
+				s1 <= '1';
+				
+			when Fechado => 
 				s0 <= '0';
 				s1 <= '0';
+			
+			when Aberto => 
+				s0 <= '0';
+				s1 <= '0';
+			
+			when BloqueadoA =>
+				s0 <= '0';
+				s1 <= '0';
+				
+			when BloqueadoF => 
+				s0 <= '0';
+				s1 <= '0';			
 		end case;
 	end process;
 	
