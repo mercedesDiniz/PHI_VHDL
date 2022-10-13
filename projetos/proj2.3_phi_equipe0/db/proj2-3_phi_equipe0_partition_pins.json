@@ -12,11 +12,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "p",
+					"name" : "fc2",
 					"strict" : false
 				},
 				{
 					"name" : "b",
+					"strict" : false
+				},
+				{
+					"name" : "p",
+					"strict" : false
+				},
+				{
+					"name" : "fc1",
 					"strict" : false
 				},
 				{

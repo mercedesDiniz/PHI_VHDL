@@ -9,19 +9,17 @@ architecture comportamento of testbench is
 	-- Declaração do componente controle_portao
 	component controle_portao
 	port(
-		clk, rst, b, p: in std_logic;		-- b => Indica o comando do botão | p => Sinalizador de presença
+		clk, rst, b, p, fc1, fc2 : in std_logic;		-- b => Indica o comando do botão | p => Sinalizador de presença
 		s0, s1 : out std_logic
 	);
 	end component;
 	
 	-- Declaração das constantes e variaveis 
-	signal clk, b, p, s0, s1 : std_logic := '0';
+	signal clk, b, p, s0, s1 , fc1, fc2: std_logic := '0';
 	signal rst : std_logic := '1';
 	
 	constant b_valores : std_logic_vector(0 to 54) := "0101010101000001111111111011111111011000001111001100111";
 	constant p_valores : std_logic_vector(0 to 54) := "1101001101010101111110000001110101010000110101010101010";
-	constant fc1_valores : std_logic_vector(0 to 54) := "0000000000000000000000000000000000000000000000000000000";
-	constant fc2_valores : std_logic_vector(0 to 54) := "0000000000000000000000000000000000000000000000000000000";
 	
 begin 
 	-- Instanciando do componente controle_portao
@@ -43,16 +41,15 @@ begin
 	begin
 		if rst = '1' then
 			i := 0;
-			j := 0;
 			b <= b_valores(i);
 			p <= p_valores(i);
-			fc1 <= fc1_valores(i);
-			fc2 <= fc2_valores(i);
+			fc1 <= fc1;
+			fc2 <= fc2;
 		elsif rising_edge(clk) then
 			b <= b_valores(i);
 			p <= p_valores(i);
-			fc1 <= fc1_valores(i);
-			fc2 <= fc2_valores(i);
+			fc1 <= fc1;
+			fc2 <= fc2;
 			
 			i := i + 1;
 			

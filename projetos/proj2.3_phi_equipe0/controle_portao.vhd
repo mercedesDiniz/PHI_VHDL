@@ -36,7 +36,7 @@ begin -- Descrição do sistema
 				end if;
 				
 			when BloqueadoF =>
-				if p = '0' and fc1 = '0' then
+				if p = '0' then
 					prox_estado <= Fechando;
 				else
 					prox_estado <= BloqueadoF;
@@ -59,7 +59,7 @@ begin -- Descrição do sistema
 				end if;
 				
 			when BloqueadoA =>
-				if p = '0' and fc2 = '0' then
+				if p = '0' then
 					prox_estado <= Abrindo;
 				else
 					prox_estado <= BloqueadoA;

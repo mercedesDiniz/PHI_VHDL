@@ -1,5 +1,5 @@
 Analysis & Elaboration report for proj2-3_phi_equipe0
-Sun Oct 09 17:46:31 2022
+Thu Oct 13 16:06:03 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Sun Oct 09 17:46:31 2022       ;
+; Analysis & Elaboration Status ; Successful - Thu Oct 13 16:06:03 2022       ;
 ; Quartus Prime Version         ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                 ; proj2-3_phi_equipe0                         ;
 ; Top-level Entity Name         ; testbench                                   ;
@@ -59,7 +59,7 @@ agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
 ; Maximum used               ; 1           ;
@@ -162,6 +162,8 @@ agreement for further details.
 ; Port ; Type   ; Severity ; Details                                                                             ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
 ; rst  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; fc1  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; fc2  ; Input  ; Info     ; Stuck at GND                                                                        ;
 ; s0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 ; s1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -173,26 +175,26 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Oct 09 17:46:21 2022
+    Info: Processing started: Thu Oct 13 16:05:50 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proj2-3_phi_equipe0 -c proj2-3_phi_equipe0 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file controle_portao.vhd
-    Info (12022): Found design unit 1: controle_portao-comportamento File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj2.3_phi_equipe0/controle_portao.vhd Line: 17
-    Info (12023): Found entity 1: controle_portao File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj2.3_phi_equipe0/controle_portao.vhd Line: 9
+    Info (12022): Found design unit 1: controle_portao-comportamento File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj2.3_phi_equipe0/controle_portao.vhd Line: 17
+    Info (12023): Found entity 1: controle_portao File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj2.3_phi_equipe0/controle_portao.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhd
-    Info (12022): Found design unit 1: testbench-comportamento File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj2.3_phi_equipe0/testbench.vhd Line: 8
-    Info (12023): Found entity 1: testbench File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj2.3_phi_equipe0/testbench.vhd Line: 5
+    Info (12022): Found design unit 1: testbench-comportamento File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj2.3_phi_equipe0/testbench.vhd Line: 8
+    Info (12023): Found entity 1: testbench File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj2.3_phi_equipe0/testbench.vhd Line: 5
 Info (12127): Elaborating entity "testbench" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at testbench.vhd(18): object "s0" assigned a value but never read File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj2.3_phi_equipe0/testbench.vhd Line: 18
-Warning (10036): Verilog HDL or VHDL warning at testbench.vhd(18): object "s1" assigned a value but never read File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj2.3_phi_equipe0/testbench.vhd Line: 18
-Info (12128): Elaborating entity "controle_portao" for hierarchy "controle_portao:inst_controlePortao" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj2.3_phi_equipe0/testbench.vhd Line: 26
-Warning (10036): Verilog HDL or VHDL warning at controle_portao.vhd(23): object "fc1" assigned a value but never read File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj2.3_phi_equipe0/controle_portao.vhd Line: 23
-Warning (10036): Verilog HDL or VHDL warning at controle_portao.vhd(23): object "fc2" assigned a value but never read File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj2.3_phi_equipe0/controle_portao.vhd Line: 23
+Warning (10036): Verilog HDL or VHDL warning at testbench.vhd(18): object "s0" assigned a value but never read File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj2.3_phi_equipe0/testbench.vhd Line: 18
+Warning (10036): Verilog HDL or VHDL warning at testbench.vhd(18): object "s1" assigned a value but never read File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj2.3_phi_equipe0/testbench.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at testbench.vhd(46): signal "fc1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj2.3_phi_equipe0/testbench.vhd Line: 46
+Warning (10492): VHDL Process Statement warning at testbench.vhd(47): signal "fc2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj2.3_phi_equipe0/testbench.vhd Line: 47
+Info (12128): Elaborating entity "controle_portao" for hierarchy "controle_portao:inst_controlePortao" File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj2.3_phi_equipe0/testbench.vhd Line: 26
 Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4838 megabytes
-    Info: Processing ended: Sun Oct 09 17:46:31 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Peak virtual memory: 4837 megabytes
+    Info: Processing ended: Thu Oct 13 16:06:03 2022
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:30
 
 
