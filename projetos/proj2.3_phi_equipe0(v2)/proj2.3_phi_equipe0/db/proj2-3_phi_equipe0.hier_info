@@ -1,0 +1,23 @@
+|controle_portao
+clk => b_anterior.CLK
+clk => estado_atual~1.DATAIN
+rst => estado_atual~3.DATAIN
+rst => b_anterior.ENA
+fc1 => logica_proximo_estado.IN0
+fc1 => logica_proximo_estado.IN0
+fc1 => logica_proximo_estado.IN0
+fc1 => logica_proximo_estado.IN1
+fc1 => logica_proximo_estado.IN0
+fc2 => logica_proximo_estado.IN1
+fc2 => logica_proximo_estado.IN1
+fc2 => logica_proximo_estado.IN1
+fc2 => logica_proximo_estado.IN1
+fc2 => logica_proximo_estado.IN1
+b => logica_proximo_estado.IN1
+b => b_anterior.DATAIN
+p => logica_proximo_estado.IN1
+p => logica_proximo_estado.IN1
+s0 <= s0.DB_MAX_OUTPUT_PORT_TYPE
+s1 <= s1.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,101 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'b'
+Slack : -5.019
+TNS   : -25.528
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -1.805
+TNS   : -3.946
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : -0.351
+TNS   : -1.041
+
+Type  : Slow 1100mV 85C Model Hold 'b'
+Slack : 1.022
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.724
+TNS   : -7.752
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'b'
+Slack : 0.365
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'b'
+Slack : -5.187
+TNS   : -26.907
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -1.546
+TNS   : -2.991
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : -0.575
+TNS   : -1.870
+
+Type  : Slow 1100mV 0C Model Hold 'b'
+Slack : 0.847
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.724
+TNS   : -7.917
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'b'
+Slack : 0.379
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'b'
+Slack : -1.456
+TNS   : -6.793
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -1.242
+TNS   : -2.634
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.199
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'b'
+Slack : 0.487
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.078
+TNS   : -0.542
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'b'
+Slack : 0.063
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'b'
+Slack : -1.299
+TNS   : -6.044
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -1.063
+TNS   : -2.199
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'b'
+Slack : 0.489
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.080
+TNS   : -0.552
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'b'
+Slack : 0.071
+TNS   : 0.000
+
+------------------------------------------------------------
