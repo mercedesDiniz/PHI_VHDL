@@ -20,8 +20,8 @@ architecture comportamento of testbench is
 	
 	constant b_valores : std_logic_vector(0 to 54) := "0101010101000001111111111011111111011000001111001100111";
 	constant p_valores : std_logic_vector(0 to 54) := "1101001101010101111110000001110101010000110101010101010";
-	constant fc1_valores : std_logic_vector(0 to 54) := "1100010101101100001110101010101010100001110101010101101";
-	constant fc2_valores : std_logic_vector(0 to 54) := "0011101010010011110001010101010101011110001010101010010";
+	constant fc1_valores : std_logic_vector(0 to 54) := "0000000000000000000000000000000000000000000000000000000";
+	constant fc2_valores : std_logic_vector(0 to 54) := "0000000000000000000000000000000000000000000000000000000";
 	
 begin 
 	-- Instanciando do componente controle_portao
