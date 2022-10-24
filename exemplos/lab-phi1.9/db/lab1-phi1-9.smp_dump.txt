@@ -1,0 +1,7 @@
+
+State Machine - |main|maquina_de_vendas_BC:BC|estado_atual
+Name estado_atual.Disp estado_atual.Add estado_atual.est_Wait estado_atual.Init 
+estado_atual.Init 0 0 0 0 
+estado_atual.est_Wait 0 0 1 1 
+estado_atual.Add 0 1 0 1 
+estado_atual.Disp 1 0 0 1 

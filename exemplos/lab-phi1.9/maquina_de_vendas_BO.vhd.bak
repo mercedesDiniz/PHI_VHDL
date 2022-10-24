@@ -1,0 +1,21 @@
+-- Maquina de Vendas (Bloco Operacional)
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+use IEEE.NUMERIC_STD.all;
+
+entity maquina_de_vendas_BO is
+	-- Definndo as portas de entrada e saida
+	port(
+		clk, tot_ld, tot_clr: in std_logic;	-- tot_ld => abilita o armazenamento da soma | tot_clr => limpa o registrador da soma
+		s, a : in std_logic_vector(8 downto 0);	-- s => indica o valor do produto | a => indica o valor da moeda
+		tot_lt_s : out std_logic_vector(8 downto 0)		-- tot_lt_s => resutado da comparação s<tot
+	);
+end maquina_de_vendas_BO;
+
+architecture comportamento of maquina_de_vendas_BO is
+	-- Região de declaração
+	
+begin	-- Descrição do sistema
+
+end architecture; 
