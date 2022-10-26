@@ -1,0 +1,4 @@
+-- Maquina de Vendas (Bloco de Controlador / Maquina de Estados)
+
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
