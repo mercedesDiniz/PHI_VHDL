@@ -10,7 +10,7 @@ entity BO is
 	);
 	-- Definndo as portas de entrada e saida
 	port(
-		clk, 
+		clk
 	);
 end BO
 

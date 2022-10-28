@@ -1,0 +1,53 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "f1",
+					"strict" : false
+				},
+				{
+					"name" : "f2",
+					"strict" : false
+				},
+				{
+					"name" : "tot_ld",
+					"strict" : false
+				},
+				{
+					"name" : "tot_clr",
+					"strict" : false
+				},
+				{
+					"name" : "vt_ld",
+					"strict" : false
+				},
+				{
+					"name" : "vt_clr",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "b1",
+					"strict" : false
+				},
+				{
+					"name" : "b2",
+					"strict" : false
+				},
+				{
+					"name" : "m",
+					"strict" : false
+				},
+				{
+					"name" : "nt",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
