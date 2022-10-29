@@ -1,4 +1,0 @@
--- Projeto 2.3 - PHI
--- Máquina de estados que controla os processos de abertura e fechamento de um portão. Se o botão é pressionado uma vez, o portão fecha, se é 
--- pressionado novamente, o portão abre. Nos processos de abertura ou fechamento, se houver algo no percurso do portão, indicado pelo sensor de 
--- presença P, o portão para o seu movimento, e retoma quando não houver mais nada no seu percurso. 
