@@ -28,7 +28,8 @@ architecture comportamento of maquina_de_vendas is
 		port(
 			clk, tot_ld, tot_clr, vt_ld, vt_clr, b1, b2 : in std_logic;
 			r1, r2, v : in std_logic_vector(7 downto 0);
-			resul_pag, resul_troco : out std_logic
+			resul_pag, resul_troco : out std_logic;
+			val_troco : out std_logic_vector(7 downto 0)
 		);
 	end component;
 	
@@ -70,7 +71,8 @@ begin -- Descrição do sistema
 			r2 => R2,
 			v => V,
 			resul_pag => resul_pag_aux,
-			resul_troco => resul_troco_aux
+			resul_troco => resul_troco_aux,
+			val_troco => VT
 		);
 		
 end architecture;
