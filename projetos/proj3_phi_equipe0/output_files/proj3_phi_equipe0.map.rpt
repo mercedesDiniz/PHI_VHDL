@@ -1,5 +1,5 @@
 Analysis & Synthesis report for proj3_phi_equipe0
-Sat Oct 29 13:59:08 2022
+Sat Oct 29 16:58:29 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -13,11 +13,12 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |BC|estado_atual
-  9. General Register Statistics
- 10. Post-Synthesis Netlist Statistics for Top Partition
- 11. Elapsed Time Per Partition
- 12. Analysis & Synthesis Messages
+  8. State Machine - |maquina_de_vendas|BC:inst_BC|estado_atual
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Post-Synthesis Netlist Statistics for Top Partition
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -44,14 +45,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Oct 29 13:59:08 2022       ;
+; Analysis & Synthesis Status     ; Successful - Sat Oct 29 16:58:29 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; proj3_phi_equipe0                           ;
-; Top-level Entity Name           ; BC                                          ;
+; Top-level Entity Name           ; maquina_de_vendas                           ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 11                                          ;
-; Total pins                      ; 13                                          ;
+; Total registers                 ; 0                                           ;
+; Total pins                      ; 39                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -70,7 +71,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; BC                 ; proj3_phi_equipe0  ;
+; Top-level entity name                                                           ; maquina_de_vendas  ; proj3_phi_equipe0  ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -160,63 +161,64 @@ agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                      ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
-; BC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+; maquina_de_vendas.vhd            ; yes             ; User VHDL File  ; C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd ;         ;
+; BO.vhd                           ; yes             ; User VHDL File  ; C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd                ;         ;
+; BC.vhd                           ; yes             ; User VHDL File  ; C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd                ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 9         ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 15        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 3         ;
-;     -- 5 input functions                    ; 1         ;
-;     -- 4 input functions                    ; 1         ;
-;     -- <=3 input functions                  ; 10        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 11        ;
-;                                             ;           ;
-; I/O pins                                    ; 13        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 11        ;
-; Total fan-out                               ; 91        ;
-; Average fan-out                             ; 1.75      ;
-+---------------------------------------------+-----------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimate of Logic utilization (ALMs needed) ; 0     ;
+;                                             ;       ;
+; Combinational ALUT usage for logic          ; 0     ;
+;     -- 7 input functions                    ; 0     ;
+;     -- 6 input functions                    ; 0     ;
+;     -- 5 input functions                    ; 0     ;
+;     -- 4 input functions                    ; 0     ;
+;     -- <=3 input functions                  ; 0     ;
+;                                             ;       ;
+; Dedicated logic registers                   ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 39    ;
+;                                             ;       ;
+; Total DSP Blocks                            ; 0     ;
+;                                             ;       ;
+; Maximum fan-out node                        ; V[0]  ;
+; Maximum fan-out                             ; 1     ;
+; Total fan-out                               ; 39    ;
+; Average fan-out                             ; 0.50  ;
++---------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
-; |BC                        ; 15 (15)             ; 11 (11)                   ; 0                 ; 0          ; 13   ; 0            ; |BC                 ; BC          ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name       ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------------+--------------+
+; |maquina_de_vendas         ; 0 (0)               ; 0 (0)                     ; 0                 ; 0          ; 39   ; 0            ; |maquina_de_vendas  ; maquina_de_vendas ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |BC|estado_atual                                                                                                                                                                                                                                                                                ;
+; State Machine - |maquina_de_vendas|BC:inst_BC|estado_atual                                                                                                                                                                                                                                                      ;
 +----------------------------+---------------------------+----------------------------+-------------------------+--------------------+----------------------+---------------------------+----------------------------+-------------------------+--------------------+----------------------+----------------------+
 ; Name                       ; estado_atual.Libera_prod2 ; estado_atual.Libera_troco2 ; estado_atual.Cal_troco2 ; estado_atual.Soma2 ; estado_atual.Espera2 ; estado_atual.Libera_prod1 ; estado_atual.Libera_troco1 ; estado_atual.Cal_troco1 ; estado_atual.Soma1 ; estado_atual.Espera1 ; estado_atual.Inicial ;
 +----------------------------+---------------------------+----------------------------+-------------------------+--------------------+----------------------+---------------------------+----------------------------+-------------------------+--------------------+----------------------+----------------------+
@@ -234,12 +236,32 @@ Encoding Type:  One-Hot
 +----------------------------+---------------------------+----------------------------+-------------------------+--------------------+----------------------+---------------------------+----------------------------+-------------------------+--------------------+----------------------+----------------------+
 
 
++---------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                              ;
++----------------------------------------+----------------------------------------+
+; Register name                          ; Reason for Removal                     ;
++----------------------------------------+----------------------------------------+
+; BC:inst_BC|estado_atual.Cal_troco1     ; Lost fanout                            ;
+; BC:inst_BC|estado_atual.Libera_troco1  ; Lost fanout                            ;
+; BC:inst_BC|estado_atual.Cal_troco2     ; Lost fanout                            ;
+; BC:inst_BC|estado_atual.Libera_troco2  ; Lost fanout                            ;
+; BC:inst_BC|estado_atual.Libera_prod1   ; Stuck at GND due to stuck port data_in ;
+; BC:inst_BC|estado_atual.Libera_prod2   ; Stuck at GND due to stuck port data_in ;
+; BC:inst_BC|estado_atual.Inicial        ; Lost fanout                            ;
+; BC:inst_BC|estado_atual.Espera1        ; Lost fanout                            ;
+; BC:inst_BC|estado_atual.Soma1          ; Lost fanout                            ;
+; BC:inst_BC|estado_atual.Espera2        ; Lost fanout                            ;
+; BC:inst_BC|estado_atual.Soma2          ; Lost fanout                            ;
+; Total Number of Removed Registers = 11 ;                                        ;
++----------------------------------------+----------------------------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 11    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -254,20 +276,13 @@ Encoding Type:  One-Hot
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 11                          ;
-;     plain             ; 11                          ;
-; arriav_lcell_comb     ; 18                          ;
-;     normal            ; 18                          ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 8                           ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 1                           ;
-;         5 data inputs ; 1                           ;
-;         6 data inputs ; 3                           ;
-; boundary_port         ; 13                          ;
+; arriav_lcell_comb     ; 1                           ;
+;     normal            ; 1                           ;
+;         0 data inputs ; 1                           ;
+; boundary_port         ; 39                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.51                        ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
 +-----------------------+-----------------------------+
 
 
@@ -286,28 +301,81 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Oct 29 13:58:57 2022
+    Info: Processing started: Sat Oct 29 16:58:20 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proj3_phi_equipe0 -c proj3_phi_equipe0
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file maquina_de_vendas.vhd
+    Info (12022): Found design unit 1: maquina_de_vendas-comportamento File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 15
+    Info (12023): Found entity 1: maquina_de_vendas File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file bo.vhd
-    Info (12022): Found design unit 1: BO-comportamento File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 17
+    Info (12022): Found design unit 1: BO-comportamento File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 16
     Info (12023): Found entity 1: BO File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file bc.vhd
-    Info (12022): Found design unit 1: BC-comportamento File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd Line: 15
+    Info (12022): Found design unit 1: BC-comportamento File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd Line: 14
     Info (12023): Found entity 1: BC File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd Line: 6
-Info (12127): Elaborating entity "BC" for the top level hierarchy
-Info (286030): Timing-Driven Synthesis is running
+Info (12127): Elaborating entity "maquina_de_vendas" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at maquina_de_vendas.vhd(11): used implicit default value for signal "VT" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 11
+Info (12128): Elaborating entity "BC" for hierarchy "BC:inst_BC" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 42
+Info (12128): Elaborating entity "BO" for hierarchy "BO:inst_BO" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 60
+Warning (10541): VHDL Signal Declaration warning at BO.vhd(12): used implicit default value for signal "resul_pag" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 12
+Warning (10541): VHDL Signal Declaration warning at BO.vhd(12): used implicit default value for signal "resul_troco" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 12
+Warning (10036): Verilog HDL or VHDL warning at BO.vhd(22): object "r" assigned a value but never read File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 22
+Warning (10540): VHDL Signal Declaration warning at BO.vhd(24): used explicit default value for signal "resul_soma" because signal was never assigned a value File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 24
+Warning (10540): VHDL Signal Declaration warning at BO.vhd(25): used explicit default value for signal "resul_subt" because signal was never assigned a value File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 25
+Warning (10492): VHDL Process Statement warning at BO.vhd(32): signal "r1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 32
+Warning (10492): VHDL Process Statement warning at BO.vhd(34): signal "r2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 34
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "F1" is stuck at GND File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 10
+    Warning (13410): Pin "F2" is stuck at GND File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 10
+    Warning (13410): Pin "NT" is stuck at GND File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 10
+    Warning (13410): Pin "VT[0]" is stuck at GND File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 11
+    Warning (13410): Pin "VT[1]" is stuck at GND File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 11
+    Warning (13410): Pin "VT[2]" is stuck at GND File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 11
+    Warning (13410): Pin "VT[3]" is stuck at GND File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 11
+    Warning (13410): Pin "VT[4]" is stuck at GND File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 11
+    Warning (13410): Pin "VT[5]" is stuck at GND File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 11
+    Warning (13410): Pin "VT[6]" is stuck at GND File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 11
+    Warning (13410): Pin "VT[7]" is stuck at GND File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 11
+Info (17049): 9 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 28 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 7 output pins
-    Info (21061): Implemented 15 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4846 megabytes
-    Info: Processing ended: Sat Oct 29 13:59:08 2022
-    Info: Elapsed time: 00:00:11
-    Info: Total CPU time (on all processors): 00:00:25
+Warning (21074): Design contains 28 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "V[0]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "V[1]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "V[2]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "V[3]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "V[4]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "V[5]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "V[6]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "V[7]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R1[0]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R1[1]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R1[2]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R1[3]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R1[4]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R1[5]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R1[6]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R1[7]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R2[0]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R2[1]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R2[2]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R2[3]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R2[4]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R2[5]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R2[6]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "R2[7]" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 9
+    Warning (15610): No output dependent on input pin "B1" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 8
+    Warning (15610): No output dependent on input pin "B2" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 8
+    Warning (15610): No output dependent on input pin "M" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 8
+    Warning (15610): No output dependent on input pin "Clk" File: C:/Users/Mercedes/QuartusLite/Projetos/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 8
+Info (21057): Implemented 39 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 28 input pins
+    Info (21059): Implemented 11 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 50 warnings
+    Info: Peak virtual memory: 4845 megabytes
+    Info: Processing ended: Sat Oct 29 16:58:29 2022
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:21
 
 

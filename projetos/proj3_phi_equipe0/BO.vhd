@@ -15,8 +15,7 @@ end BO;
 
 architecture comportamento of BO is
 	-- Região de declaração
-	--constant r1 :  std_logic_vector(0 to 7) := "01100100"; -- custo do produto 1 - R$ 1 = 100 centavos 
-	--constant r2 :  std_logic_vector(0 to 7) := "11111010"; -- custo do produto 2 - R$ 2,50 = 250 centavos
+
 	signal val_tot : std_logic_vector(7 downto 0);-- := (others => '0'); -- valor armazenado no registrador tot
 	signal val_vt : std_logic_vector(7 downto 0); -- valor armazenado no registrador vt
 	

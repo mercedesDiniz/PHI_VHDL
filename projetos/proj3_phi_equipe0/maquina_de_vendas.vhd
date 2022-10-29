@@ -33,35 +33,44 @@ architecture comportamento of maquina_de_vendas is
 	end component;
 	
 	-- Declaração das constantes e variaveis:
-	
+	signal resul_pag_aux, resul_troco_aux : std_logic;
+	signal tot_ld_aux, tot_clr_aux, vt_ld_aux, vt_clr_aux : std_logic;
+
 begin -- Descrição do sistema
 	
 	-- Instanciando o Bloco de Controle
-	inst_ BC : BC
+	inst_BC : BC
 		port map(
-			clk => 
-			m => 
-			b1 =>
-			b2 =>
-			resul_pag =>
-			resul_troco =>
+			clk => Clk,
+			m => M,
+			b1 => B1,
+			b2 => B2,
+			resul_pag => resul_pag_aux,
+			resul_troco => resul_troco_aux,
+			f1 => F1,
+			f2 => F2,
+			tot_ld => tot_ld_aux,
+			tot_clr => tot_clr_aux,
+			vt_ld => vt_ld_aux,
+			vt_clr => vt_clr_aux,
+			nt => NT
 		);
 		
 	-- Instanciando o Bloco Operacional
-	inst_ BO : BO
+	inst_BO : BO
 		port map(
-			clk =>
-			tot_ld =>
-			tot_clr =>
-			vt_ld =>
-			vt_clr =>
-			b1 =>
-			b2 =>
-			r1 =>
-			r2 =>
-			v =>
-			resul_pag =>
-			resul_troco =>
+			clk => Clk,
+			tot_ld => tot_ld_aux,
+			tot_clr => tot_clr_aux, 
+			vt_ld => vt_ld_aux,
+			vt_clr => vt_clr_aux,
+			b1 => B1,
+			b2 => B2,
+			r1 => R1,
+			r2 => R2,
+			v => V,
+			resul_pag => resul_pag_aux,
+			resul_troco => resul_troco_aux
 		);
 		
 end architecture;

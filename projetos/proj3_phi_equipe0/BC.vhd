@@ -55,7 +55,7 @@ begin -- Descrição do sistema
 				end if;
 				
 			when Libera_troco1 =>
-				prox_estado <= Inicial;
+				prox_estado <= Libera_prod1;
 				
 			when Libera_prod1 =>
 				prox_estado <= Inicial;
@@ -72,7 +72,7 @@ begin -- Descrição do sistema
 					prox_estado <= Espera2;
 				end if;
 				
-			when Soma2 =>											-- o BO faz tot = tot + v p/ calcular o total de dinheiro inserido
+			when Soma2 =>												-- o BO faz tot = tot + v p/ calcular o total de dinheiro inserido
 					prox_estado <= Espera2;					
 				
 			when Cal_troco2 =>										-- o BO faz vt = tot-r p/ calcular o possivel troco
@@ -83,7 +83,7 @@ begin -- Descrição do sistema
 				end if;
 				
 			when Libera_troco2 =>
-				prox_estado <= Inicial;
+				prox_estado <= Libera_prod2;
 				
 			when Libera_prod2 =>
 				prox_estado <= Inicial;
@@ -198,7 +198,7 @@ begin -- Descrição do sistema
 			tot_ld <= '0';		
 			tot_clr <= '1';  	-- limpa registrador tot
 			vt_ld <= '0';		
-			vt_clr <= '1';	  	-- limp o registrador vt
+			vt_clr <= '1';	  	-- limpa o registrador vt
 			nt <= '0';			
 			
 		end case;

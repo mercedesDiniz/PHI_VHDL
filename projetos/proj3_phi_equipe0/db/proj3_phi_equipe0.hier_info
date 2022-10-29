@@ -1,4 +1,49 @@
-|BC
+|maquina_de_vendas
+Clk => BC:inst_BC.clk
+Clk => BO:inst_BO.clk
+M => BC:inst_BC.m
+B1 => BC:inst_BC.b1
+B1 => BO:inst_BO.b1
+B2 => BC:inst_BC.b2
+B2 => BO:inst_BO.b2
+V[0] => BO:inst_BO.v[0]
+V[1] => BO:inst_BO.v[1]
+V[2] => BO:inst_BO.v[2]
+V[3] => BO:inst_BO.v[3]
+V[4] => BO:inst_BO.v[4]
+V[5] => BO:inst_BO.v[5]
+V[6] => BO:inst_BO.v[6]
+V[7] => BO:inst_BO.v[7]
+R1[0] => BO:inst_BO.r1[0]
+R1[1] => BO:inst_BO.r1[1]
+R1[2] => BO:inst_BO.r1[2]
+R1[3] => BO:inst_BO.r1[3]
+R1[4] => BO:inst_BO.r1[4]
+R1[5] => BO:inst_BO.r1[5]
+R1[6] => BO:inst_BO.r1[6]
+R1[7] => BO:inst_BO.r1[7]
+R2[0] => BO:inst_BO.r2[0]
+R2[1] => BO:inst_BO.r2[1]
+R2[2] => BO:inst_BO.r2[2]
+R2[3] => BO:inst_BO.r2[3]
+R2[4] => BO:inst_BO.r2[4]
+R2[5] => BO:inst_BO.r2[5]
+R2[6] => BO:inst_BO.r2[6]
+R2[7] => BO:inst_BO.r2[7]
+F1 <= BC:inst_BC.f1
+F2 <= BC:inst_BC.f2
+NT <= BC:inst_BC.nt
+VT[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+VT[1] <= VT[1].DB_MAX_OUTPUT_PORT_TYPE
+VT[2] <= VT[2].DB_MAX_OUTPUT_PORT_TYPE
+VT[3] <= VT[3].DB_MAX_OUTPUT_PORT_TYPE
+VT[4] <= VT[4].DB_MAX_OUTPUT_PORT_TYPE
+VT[5] <= VT[5].DB_MAX_OUTPUT_PORT_TYPE
+VT[6] <= VT[6].DB_MAX_OUTPUT_PORT_TYPE
+VT[7] <= VT[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|maquina_de_vendas|BC:inst_BC
 clk => estado_atual~1.DATAIN
 m => prox_estado.OUTPUTSELECT
 m => prox_estado.OUTPUTSELECT
@@ -12,14 +57,50 @@ b2 => logica_proximo_estado.IN1
 resul_pag => logica_proximo_estado.IN1
 resul_troco => prox_estado.Libera_troco1.DATAB
 resul_troco => prox_estado.Libera_troco2.DATAB
-resul_troco => prox_estado.Libera_prod1.DATAB
-resul_troco => prox_estado.Libera_prod2.DATAB
-f1 << f1.DB_MAX_OUTPUT_PORT_TYPE
-f2 << f2.DB_MAX_OUTPUT_PORT_TYPE
-tot_ld << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-tot_clr << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
-vt_ld << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-vt_clr << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
-nt << nt.DB_MAX_OUTPUT_PORT_TYPE
+resul_troco => Selector2.IN2
+resul_troco => Selector4.IN2
+f1 <= f1.DB_MAX_OUTPUT_PORT_TYPE
+f2 <= f2.DB_MAX_OUTPUT_PORT_TYPE
+tot_ld <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+tot_clr <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+vt_ld <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+vt_clr <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+nt <= nt.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|maquina_de_vendas|BO:inst_BO
+clk => ~NO_FANOUT~
+tot_ld => ~NO_FANOUT~
+tot_clr => ~NO_FANOUT~
+vt_ld => ~NO_FANOUT~
+vt_clr => ~NO_FANOUT~
+b1 => ~NO_FANOUT~
+b2 => ~NO_FANOUT~
+r1[0] => ~NO_FANOUT~
+r1[1] => ~NO_FANOUT~
+r1[2] => ~NO_FANOUT~
+r1[3] => ~NO_FANOUT~
+r1[4] => ~NO_FANOUT~
+r1[5] => ~NO_FANOUT~
+r1[6] => ~NO_FANOUT~
+r1[7] => ~NO_FANOUT~
+r2[0] => ~NO_FANOUT~
+r2[1] => ~NO_FANOUT~
+r2[2] => ~NO_FANOUT~
+r2[3] => ~NO_FANOUT~
+r2[4] => ~NO_FANOUT~
+r2[5] => ~NO_FANOUT~
+r2[6] => ~NO_FANOUT~
+r2[7] => ~NO_FANOUT~
+v[0] => ~NO_FANOUT~
+v[1] => ~NO_FANOUT~
+v[2] => ~NO_FANOUT~
+v[3] => ~NO_FANOUT~
+v[4] => ~NO_FANOUT~
+v[5] => ~NO_FANOUT~
+v[6] => ~NO_FANOUT~
+v[7] => ~NO_FANOUT~
+resul_pag <= resul_pag.DB_MAX_OUTPUT_PORT_TYPE
+resul_troco <= comb.DB_MAX_OUTPUT_PORT_TYPE
 
 
