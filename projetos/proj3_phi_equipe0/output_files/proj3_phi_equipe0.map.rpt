@@ -1,5 +1,5 @@
-Analysis & Synthesis report for proj3_phi_equipe0
-Sat Oct 29 17:38:11 2022
+Analysis & Elaboration report for proj3_phi_equipe0
+Sat Oct 29 19:20:08 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -7,18 +7,11 @@ Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Synthesis Summary
-  3. Analysis & Synthesis Settings
-  4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |maquina_de_vendas|BC:inst_BC|estado_atual
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "maquina_de_vendas:int_maquina_de_vendas"
+  6. Analysis & Elaboration Messages
 
 
 
@@ -42,36 +35,47 @@ agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                  ;
-+---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sat Oct 29 17:38:11 2022       ;
-; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
-; Revision Name                   ; proj3_phi_equipe0                           ;
-; Top-level Entity Name           ; maquina_de_vendas                           ;
-; Family                          ; Cyclone V                                   ;
-; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 27                                          ;
-; Total pins                      ; 39                                          ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0                                           ;
-; Total DSP Blocks                ; 0                                           ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0                                           ;
-; Total DLLs                      ; 0                                           ;
-+---------------------------------+---------------------------------------------+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Sat Oct 29 19:20:08 2022       ;
+; Quartus Prime Version         ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
+; Revision Name                 ; proj3_phi_equipe0                           ;
+; Top-level Entity Name         ; testbench                                   ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 8           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                             ;
+; Analysis & Elaboration Settings                                                                                           ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
-; Top-level entity name                                                           ; maquina_de_vendas  ; proj3_phi_equipe0  ;
+; Top-level entity name                                                           ; testbench          ; proj3_phi_equipe0  ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -152,162 +156,43 @@ agreement for further details.
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 8           ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
-+----------------------------+-------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "maquina_de_vendas:int_maquina_de_vendas"                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; b1       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b2       ; Input  ; Info     ; Stuck at GND                                                                        ;
+; v        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r1[6..5] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; r1[4..3] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r1[1..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r1[7]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r1[2]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; r2[7..3] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; r2[2]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; r2[1]    ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; r2[0]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; f1       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f2       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; nt       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; vt       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                   ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                            ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------+
-; maquina_de_vendas.vhd            ; yes             ; User VHDL File  ; C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd ;         ;
-; BO.vhd                           ; yes             ; User VHDL File  ; C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd                ;         ;
-; BC.vhd                           ; yes             ; User VHDL File  ; C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd                ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 30        ;
-;                                             ;           ;
-; Combinational ALUT usage for logic          ; 53        ;
-;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 7         ;
-;     -- 5 input functions                    ; 19        ;
-;     -- 4 input functions                    ; 14        ;
-;     -- <=3 input functions                  ; 13        ;
-;                                             ;           ;
-; Dedicated logic registers                   ; 27        ;
-;                                             ;           ;
-; I/O pins                                    ; 39        ;
-;                                             ;           ;
-; Total DSP Blocks                            ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; Clk~input ;
-; Maximum fan-out                             ; 27        ;
-; Total fan-out                               ; 352       ;
-; Average fan-out                             ; 2.23      ;
-+---------------------------------------------+-----------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                    ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name           ; Entity Name       ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+-------------------+--------------+
-; |maquina_de_vendas         ; 53 (0)              ; 27 (0)                    ; 0                 ; 0          ; 39   ; 0            ; |maquina_de_vendas            ; maquina_de_vendas ; work         ;
-;    |BC:inst_BC|            ; 16 (16)             ; 11 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |maquina_de_vendas|BC:inst_BC ; BC                ; work         ;
-;    |BO:inst_BO|            ; 37 (37)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |maquina_de_vendas|BO:inst_BO ; BO                ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------+-------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |maquina_de_vendas|BC:inst_BC|estado_atual                                                                                                                                                                                                                                                      ;
-+----------------------------+---------------------------+----------------------------+-------------------------+--------------------+----------------------+---------------------------+----------------------------+-------------------------+--------------------+----------------------+----------------------+
-; Name                       ; estado_atual.Libera_prod2 ; estado_atual.Libera_troco2 ; estado_atual.Cal_troco2 ; estado_atual.Soma2 ; estado_atual.Espera2 ; estado_atual.Libera_prod1 ; estado_atual.Libera_troco1 ; estado_atual.Cal_troco1 ; estado_atual.Soma1 ; estado_atual.Espera1 ; estado_atual.Inicial ;
-+----------------------------+---------------------------+----------------------------+-------------------------+--------------------+----------------------+---------------------------+----------------------------+-------------------------+--------------------+----------------------+----------------------+
-; estado_atual.Inicial       ; 0                         ; 0                          ; 0                       ; 0                  ; 0                    ; 0                         ; 0                          ; 0                       ; 0                  ; 0                    ; 0                    ;
-; estado_atual.Espera1       ; 0                         ; 0                          ; 0                       ; 0                  ; 0                    ; 0                         ; 0                          ; 0                       ; 0                  ; 1                    ; 1                    ;
-; estado_atual.Soma1         ; 0                         ; 0                          ; 0                       ; 0                  ; 0                    ; 0                         ; 0                          ; 0                       ; 1                  ; 0                    ; 1                    ;
-; estado_atual.Cal_troco1    ; 0                         ; 0                          ; 0                       ; 0                  ; 0                    ; 0                         ; 0                          ; 1                       ; 0                  ; 0                    ; 1                    ;
-; estado_atual.Libera_troco1 ; 0                         ; 0                          ; 0                       ; 0                  ; 0                    ; 0                         ; 1                          ; 0                       ; 0                  ; 0                    ; 1                    ;
-; estado_atual.Libera_prod1  ; 0                         ; 0                          ; 0                       ; 0                  ; 0                    ; 1                         ; 0                          ; 0                       ; 0                  ; 0                    ; 1                    ;
-; estado_atual.Espera2       ; 0                         ; 0                          ; 0                       ; 0                  ; 1                    ; 0                         ; 0                          ; 0                       ; 0                  ; 0                    ; 1                    ;
-; estado_atual.Soma2         ; 0                         ; 0                          ; 0                       ; 1                  ; 0                    ; 0                         ; 0                          ; 0                       ; 0                  ; 0                    ; 1                    ;
-; estado_atual.Cal_troco2    ; 0                         ; 0                          ; 1                       ; 0                  ; 0                    ; 0                         ; 0                          ; 0                       ; 0                  ; 0                    ; 1                    ;
-; estado_atual.Libera_troco2 ; 0                         ; 1                          ; 0                       ; 0                  ; 0                    ; 0                         ; 0                          ; 0                       ; 0                  ; 0                    ; 1                    ;
-; estado_atual.Libera_prod2  ; 1                         ; 0                          ; 0                       ; 0                  ; 0                    ; 0                         ; 0                          ; 0                       ; 0                  ; 0                    ; 1                    ;
-+----------------------------+---------------------------+----------------------------+-------------------------+--------------------+----------------------+---------------------------+----------------------------+-------------------------+--------------------+----------------------+----------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 27    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 16    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |maquina_de_vendas|BO:inst_BO|r[7] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; arriav_ff             ; 27                          ;
-;     CLR               ; 16                          ;
-;     plain             ; 11                          ;
-; arriav_lcell_comb     ; 54                          ;
-;     arith             ; 17                          ;
-;         0 data inputs ; 1                           ;
-;         2 data inputs ; 8                           ;
-;         5 data inputs ; 8                           ;
-;     normal            ; 37                          ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 4                           ;
-;         4 data inputs ; 14                          ;
-;         5 data inputs ; 11                          ;
-;         6 data inputs ; 7                           ;
-; boundary_port         ; 39                          ;
-;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.29                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
-+-------------------------------+
-; Analysis & Synthesis Messages ;
-+-------------------------------+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
+Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Sat Oct 29 17:37:55 2022
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proj3_phi_equipe0 -c proj3_phi_equipe0
+    Info: Processing started: Sat Oct 29 19:19:53 2022
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proj3_phi_equipe0 -c proj3_phi_equipe0 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhd
+    Info (12022): Found design unit 1: testbench-comportamento File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd Line: 12
+    Info (12023): Found entity 1: testbench File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file maquina_de_vendas.vhd
     Info (12022): Found design unit 1: maquina_de_vendas-comportamento File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 15
     Info (12023): Found entity 1: maquina_de_vendas File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 6
@@ -317,22 +202,23 @@ Info (12021): Found 2 design units, including 1 entities, in source file bo.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file bc.vhd
     Info (12022): Found design unit 1: BC-comportamento File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd Line: 14
     Info (12023): Found entity 1: BC File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd Line: 6
-Info (12127): Elaborating entity "maquina_de_vendas" for the top level hierarchy
-Info (12128): Elaborating entity "BC" for hierarchy "BC:inst_BC" File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 43
-Info (12128): Elaborating entity "BO" for hierarchy "BO:inst_BO" File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 61
+Info (12127): Elaborating entity "testbench" for the top level hierarchy
+Warning (10540): VHDL Signal Declaration warning at testbench.vhd(24): used explicit default value for signal "B1" because signal was never assigned a value File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd Line: 24
+Warning (10540): VHDL Signal Declaration warning at testbench.vhd(24): used explicit default value for signal "B2" because signal was never assigned a value File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd Line: 24
+Warning (10036): Verilog HDL or VHDL warning at testbench.vhd(24): object "F1" assigned a value but never read File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd Line: 24
+Warning (10036): Verilog HDL or VHDL warning at testbench.vhd(24): object "F2" assigned a value but never read File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd Line: 24
+Warning (10036): Verilog HDL or VHDL warning at testbench.vhd(24): object "NT" assigned a value but never read File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd Line: 24
+Warning (10036): Verilog HDL or VHDL warning at testbench.vhd(25): object "VT" assigned a value but never read File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd Line: 25
+Warning (10873): Using initial value X (don't care) for net "valor_moeda" at testbench.vhd(30) File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd Line: 30
+Info (12128): Elaborating entity "maquina_de_vendas" for hierarchy "maquina_de_vendas:int_maquina_de_vendas" File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd Line: 38
+Info (12128): Elaborating entity "BC" for hierarchy "maquina_de_vendas:int_maquina_de_vendas|BC:inst_BC" File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 43
+Info (12128): Elaborating entity "BO" for hierarchy "maquina_de_vendas:int_maquina_de_vendas|BO:inst_BO" File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 61
 Warning (10492): VHDL Process Statement warning at BO.vhd(35): signal "r1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 35
 Warning (10492): VHDL Process Statement warning at BO.vhd(37): signal "r2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 37
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 92 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 28 input pins
-    Info (21059): Implemented 11 output pins
-    Info (21061): Implemented 53 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 4884 megabytes
-    Info: Processing ended: Sat Oct 29 17:38:11 2022
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:36
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 4835 megabytes
+    Info: Processing ended: Sat Oct 29 19:20:08 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:33
 
 

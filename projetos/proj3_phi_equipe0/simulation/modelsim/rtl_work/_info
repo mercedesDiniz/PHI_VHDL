@@ -1,0 +1,178 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/simulation/modelsim
+Ebc
+Z1 w1667074149
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd
+Z5 FC:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd
+l0
+L6
+Vj@]jB5]nNej^7]lk1?j5k2
+!s100 `3I6h4UF?bhG7]`_eo@OH0
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1667082042
+!i10b 1
+Z8 !s108 1667082042.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd|
+Z10 !s107 C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Acomportamento
+R2
+R3
+DEx4 work 2 bc 0 22 j@]jB5]nNej^7]lk1?j5k2
+l19
+L14
+V>BOBO3:S:bd9[a_6FoJe51
+!s100 II3oU^NEG@nIlLN3CIW0;0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ebo
+Z13 w1667075875
+Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z16 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R2
+R3
+R0
+Z17 8C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd
+Z18 FC:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd
+l0
+L8
+VobXLSB<jKlY]ceozH=@2a3
+!s100 BhXK5=oE;i:A_9TmoD4k^2
+R6
+31
+R7
+!i10b 1
+R8
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd|
+Z20 !s107 C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd|
+!i113 1
+R11
+R12
+Acomportamento
+R14
+R15
+R16
+R2
+R3
+DEx4 work 2 bo 0 22 obXLSB<jKlY]ceozH=@2a3
+l30
+L18
+VEKo?9]N7T84Abe9kZ0RZc3
+!s100 G:[mDcY_O=CIL<Ol9C_QN1
+R6
+31
+R7
+!i10b 1
+R8
+R19
+R20
+!i113 1
+R11
+R12
+Emaquina_de_vendas
+Z21 w1667075496
+R2
+R3
+R0
+Z22 8C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd
+Z23 FC:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd
+l0
+L6
+V8ETaTHbO73O^H81?NP@gn3
+!s100 fbRSN;CC1zYgigb<l81P92
+R6
+31
+R7
+!i10b 1
+R8
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd|
+Z25 !s107 C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd|
+!i113 1
+R11
+R12
+Acomportamento
+R2
+R3
+DEx4 work 17 maquina_de_vendas 0 22 8ETaTHbO73O^H81?NP@gn3
+l40
+L15
+VbA7DWhR3am;5i<A:_mk]B0
+!s100 J37=[_z7ad?7P@D:BcMzc3
+R6
+31
+R7
+!i10b 1
+R8
+R24
+R25
+!i113 1
+R11
+R12
+Etestbench
+Z26 w1667081993
+R14
+R15
+R16
+R2
+R3
+R0
+Z27 8C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd
+Z28 FC:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd
+l0
+L9
+V8g_>@WHS6:m2X8P9A]PEH2
+!s100 bjBz4P=Lj5hZzf@@iVcaM1
+R6
+31
+R7
+!i10b 1
+Z29 !s108 1667082041.000000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd|
+Z31 !s107 C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd|
+!i113 1
+R11
+R12
+Acomportamento
+R14
+R15
+R16
+R2
+R3
+DEx4 work 9 testbench 0 22 8g_>@WHS6:m2X8P9A]PEH2
+l35
+L12
+VRdgFX79fDMO0?<z>[OXjN2
+!s100 HRda]Aa<?3Ri<^;LfG<_U1
+R6
+31
+R7
+!i10b 1
+R29
+R30
+R31
+!i113 1
+R11
+R12
