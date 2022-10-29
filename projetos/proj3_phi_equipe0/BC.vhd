@@ -5,79 +5,88 @@ use IEEE.STD_LOGIC_1164.all;
 
 entity BC is
 	-- Definndo as portas de entrada e saida
-	port(
-		clk, m, b1, b2, nt : in std_logic; -- m = detector de moeda | b = seleciona o produto | comp_R = indica se o valor do produto ja foi pago (resultado de tot<r? se 1 = sim / 0 = não)
-		f1, f2, tot_ld, tot_clr, vt_ld, vt_clr : out std_logic -- f = libera o produto | tot_ld =  habilita o armazenamento da soma | tot_clr =  limpa o registrador da soma | vt_ld = habilita o armazenamento na subtração (troco)
-		
+	port(																			-- resul_pag = indica se o valor do produto ja foi pago (tot<r?) | resul_troco = indica se tem troco (vt>0?)
+		clk, m, b1, b2, resul_pag, resul_troco : in std_logic; 	-- m = detector de moeda | b = seleciona o produto
+		f1, f2, tot_ld, tot_clr, vt_ld, vt_clr, nt : out std_logic 	-- f = libera o produto | tot_ld e vt_ld = habilita os registradores | tot_clr e vt_clr =  limpa os registradores
 	);
 end BC;
 
 architecture comportamento of BC is
 	-- Região de declaração
-	constant r1 :  std_logic_vector(0 to 7) := "01100100"; -- custo do produto 1 - R$ 1 = 100 centavos) 
-	constant r2 :  std_logic_vector(0 to 7) := "11111010"; -- custo do produto 2 - R$ 2,50 = 250 centavos)
-	
-	type tipo_estado is (Inicial, espera_p1, Soma_p1, Cal_troco_p1, Libera_p1, espera_p2, Soma_p2, Cal_troco_p2, Libera_p2); -- Estados possiveis
+	type tipo_estado is (Inicial, Espera1, Soma1, Cal_troco1, Libera_troco1, Libera_prod1, Espera2, Soma2, Cal_troco2, Libera_troco2, Libera_prod2); -- Estados possiveis
 	signal prox_estado, estado_atual : tipo_estado := Inicial;
 	
 begin -- Descrição do sistema
 
-	logica_proximo_estado : process(estado_atual, m, nt, b1, b2)
+	logica_proximo_estado : process(estado_atual, m, b1, b2, resul_pag, resul_troco)
 	begin
 		case estado_atual is 
 			when Inicial =>			
 				if b1 = '1' and b2 = '0' then 			-- selecional o produto 1
-					prox_estado <= espera_p1; 
+					prox_estado <= Espera1; 
 					
 				elsif b1 = '0' and b2 = '1' then			-- selecional o produto 2
-					prox_estado <= espera_p2;
+					prox_estado <= Espera2;
 					
 				else 
 					prox_estado <= Inicial;
 				end if;
 			
 			-- Estados do produto 1:
-			when espera_p1 =>
-				if m = '1' then								--	moeda inserida
-					prox_estado <= Soma_p1;
+			when Espera1 =>
+				if m = '1' then										--	moeda inserida
+					prox_estado <= Soma1;
 					
-				elsif m = '0' and nt = '0' then			-- terminou de paga
-					prox_estado <= Cal_troco_p1;
+				elsif m = '0' and resul_pag = '1' then			-- terminou de paga
+					prox_estado <= Cal_troco1;
 				
-				else												-- não terminou de paga
-					prox_estado <= espera_p1;
+				else														-- não terminou de paga
+					prox_estado <= Espera1;
 				end if;
 				
-			when Soma_p1 =>
-					prox_estado <= espera_p1;					
+			when Soma1 =>											-- o BO faz tot = tot + v p/ calcular o total de dinheiro inserido
+					prox_estado <= Espera1;					
 				
-			when Cal_troco_p1 =>								-- o BO faz vt = tot-r p/ calcular troco
-				prox_estado <= Libera_p1;
-			
-			when Libera_p1 =>
+			when Cal_troco1 =>										-- o BO faz vt = tot-r p/ calcular o possivel troco
+				if resul_troco = '1' then -- tem troco (vt>0)
+					prox_estado <= Libera_troco1;
+				else 
+					prox_estado <= Libera_prod1;
+				end if;
+				
+			when Libera_troco1 =>
+				prox_estado <= Inicial;
+				
+			when Libera_prod1 =>
 				prox_estado <= Inicial;
 			
 			-- Estados do produto 2:
-			when espera_p2 =>
-				if m = '1' then								--	moeda inserida
-					prox_estado <= Soma_p2;
+			when Espera2 =>
+				if m = '1' then										--	moeda inserida
+					prox_estado <= Soma2;
 					
-				elsif m = '0' and nt = '0' then			-- terminou de paga
-					prox_estado <= Cal_troco_p2;
+				elsif m = '0' and resul_pag = '1' then			-- terminou de paga
+					prox_estado <= Cal_troco2;
 				
-				else												-- não terminou de paga
-					prox_estado <= espera_p2;
+				else														-- não terminou de paga
+					prox_estado <= Espera2;
 				end if;
 				
-			when Soma_p2 =>
-					prox_estado <= espera_p2;					
+			when Soma2 =>											-- o BO faz tot = tot + v p/ calcular o total de dinheiro inserido
+					prox_estado <= Espera2;					
 				
-			when Cal_troco_p2 =>								-- o BO faz vt = tot-r p/ calcular troco
-				prox_estado <= Libera_p2;
-			
-			when Libera_p2 =>
+			when Cal_troco2 =>										-- o BO faz vt = tot-r p/ calcular o possivel troco
+				if resul_troco = '1' then -- tem troco (vt>0)
+					prox_estado <= Libera_troco2;
+				else 
+					prox_estado <= Libera_prod2;
+				end if;
+				
+			when Libera_troco2 =>
 				prox_estado <= Inicial;
 				
+			when Libera_prod2 =>
+				prox_estado <= Inicial;
 		end case;
 	end process;
 	
@@ -95,73 +104,103 @@ begin -- Descrição do sistema
 			f1 <= '0';
 			f2 <= '0';
 			tot_ld <= '0';
-			tot_clr <= '1';  -- limpa registrador tot
+			tot_clr <= '1';  	-- limpa registrador tot
 			vt_ld <= '0';
-			vt_clr <= '1';	  -- limpa registrador vt
+			vt_clr <= '1';		-- limpa registrador vt
+			nt <= '0';
+			
+		-- Estados dodo a seleção do produto 1:
+		when Espera1 =>
+			f1 <= '0';
+			f2 <= '0';
+			tot_ld <= '1';		-- habilita registrador tot
+			tot_clr <= '0';  
+			vt_ld <= '0';
+			vt_clr <= '1';	  	-- limpa registrador vt
+			nt <= '0';
+			
+		when Soma1 =>
+			f1 <= '0';
+			f2 <= '0';
+			tot_ld <= '1';		-- habilita registrador tot
+			tot_clr <= '0';  
+			vt_ld <= '0';
+			vt_clr <= '1';	  	-- limpa registrador vt
+			nt <= '0'; 
+			
+		when Cal_troco1 =>
+			f1 <= '0';
+			f2 <= '0';
+			tot_ld <= '1';		-- habilita registrador tot
+			tot_clr <= '0';  
+			vt_ld <= '1';		-- habilita registrador vt
+			vt_clr <= '0';	  	
+			nt <= '0';
+			
+		when Libera_troco1 =>
+			f1 <= '0';
+			f2 <= '0';
+			tot_ld <= '0';		
+			tot_clr <= '1';  	-- limpa registrador tot
+			vt_ld <= '1';		-- habilita registrador vt
+			vt_clr <= '0';	  	
+			nt <= '1';			-- indica que há troco (sendo o valor vt)
+			
+		when Libera_prod1 =>
+			f1 <= '1';			-- libera o produto 1
+			f2 <= '0';
+			tot_ld <= '0';		
+			tot_clr <= '1';  	-- limpa registrador tot
+			vt_ld <= '0';		
+			vt_clr <= '1';	  	-- limp o registrador vt
+			nt <= '0';
 
-		when espera_p1 =>
+		-- Estados dodo a seleção do produto 2:
+		when Espera2 =>
 			f1 <= '0';
 			f2 <= '0';
-			tot_ld <= '1';		-- registrador tot habilitado
+			tot_ld <= '1';		-- habilita registrador tot
 			tot_clr <= '0';  
 			vt_ld <= '0';
-			vt_clr <= '1';	  -- limpa registrador vt
+			vt_clr <= '1';	  	-- limpa registrador vt
+			nt <= '0';
 			
-		when Soma_p1 =>
+		when Soma2 =>
 			f1 <= '0';
 			f2 <= '0';
-			tot_ld <= '1';		-- registrador tot habilitado
+			tot_ld <= '1';		-- habilita registrador tot
 			tot_clr <= '0';  
 			vt_ld <= '0';
-			vt_clr <= '1';	  -- limpa registrador vt
-		
-		when Cal_troco_p1 =>
-			f1 <= '0';
-			f2 <= '0';
-			tot_ld <= '1';		-- registrador tot habilitado
-			tot_clr <= '0';  
-			vt_ld <= '1';	 	-- registrador vt habilitado
-			vt_clr <= '0';	  
-		
-		when Libera_p1 =>
-			f1 <= '1';			-- libera o produto
-			f2 <= '0';
-			tot_ld <= '1';		-- registrador tot habilitado (precisa?)
-			tot_clr <= '0';  
-			vt_ld <= '1';	 	-- registrador vt habilitado (precisa?)
-			vt_clr <= '0';	  
-		
-		when espera_p2 =>
-			f1 <= '0';
-			f2 <= '0';
-			tot_ld <= '1';		-- registrador tot habilitado
-			tot_clr <= '0';  
-			vt_ld <= '0';
-			vt_clr <= '1';	  -- limpa registrador vt
-		
-		when Soma_p2 =>
-			f1 <= '0';
-			f2 <= '0';
-			tot_ld <= '1';		-- registrador tot habilitado
-			tot_clr <= '0';  
-			vt_ld <= '0';
-			vt_clr <= '1';	  -- limpa registrador vt
+			vt_clr <= '1';	  	-- limpa registrador vt
+			nt <= '0'; 
 			
-		when Cal_troco_p2 =>
+		when Cal_troco2 =>
 			f1 <= '0';
 			f2 <= '0';
-			tot_ld <= '1';		-- registrador tot habilitado
+			tot_ld <= '1';		-- habilita registrador tot
 			tot_clr <= '0';  
-			vt_ld <= '1';	 	-- registrador vt habilitado
-			vt_clr <= '0';
+			vt_ld <= '1';		-- habilita registrador vt
+			vt_clr <= '0';	  	
+			nt <= '0';
 			
-		when Libera_p2 =>
+		when Libera_troco2 =>
 			f1 <= '0';
-			f2 <= '1';			-- libera o produto
-			tot_ld <= '1';		-- registrador tot habilitado (precisa?)
-			tot_clr <= '0';  
-			vt_ld <= '1';	 	-- registrador vt habilitado (precisa?)
-			vt_clr <= '0';	  
+			f2 <= '0';
+			tot_ld <= '0';		
+			tot_clr <= '1';  	-- limpa registrador tot
+			vt_ld <= '1';		-- habilita registrador vt
+			vt_clr <= '0';	  	
+			nt <= '1';			-- indica que há troco (sendo o valor vt)
+			
+		when Libera_prod2 =>
+			f1 <= '0';			
+			f2 <= '1';			-- libera o produto 2
+			tot_ld <= '0';		
+			tot_clr <= '1';  	-- limpa registrador tot
+			vt_ld <= '0';		
+			vt_clr <= '1';	  	-- limp o registrador vt
+			nt <= '0';			
+			
 		end case;
 	end process;
 	

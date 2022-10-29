@@ -28,6 +28,14 @@
 					"strict" : false
 				},
 				{
+					"name" : "nt",
+					"strict" : false
+				},
+				{
+					"name" : "resul_troco",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
@@ -44,7 +52,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "nt",
+					"name" : "resul_pag",
 					"strict" : false
 				}
 			]

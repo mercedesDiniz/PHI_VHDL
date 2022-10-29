@@ -1,12 +1,14 @@
 
 State Machine - |BC|estado_atual
-Name estado_atual.Libera_p2 estado_atual.Cal_troco_p2 estado_atual.Soma_p2 estado_atual.espera_p2 estado_atual.Libera_p1 estado_atual.Cal_troco_p1 estado_atual.Soma_p1 estado_atual.espera_p1 estado_atual.Inicial 
-estado_atual.Inicial 0 0 0 0 0 0 0 0 0 
-estado_atual.espera_p1 0 0 0 0 0 0 0 1 1 
-estado_atual.Soma_p1 0 0 0 0 0 0 1 0 1 
-estado_atual.Cal_troco_p1 0 0 0 0 0 1 0 0 1 
-estado_atual.Libera_p1 0 0 0 0 1 0 0 0 1 
-estado_atual.espera_p2 0 0 0 1 0 0 0 0 1 
-estado_atual.Soma_p2 0 0 1 0 0 0 0 0 1 
-estado_atual.Cal_troco_p2 0 1 0 0 0 0 0 0 1 
-estado_atual.Libera_p2 1 0 0 0 0 0 0 0 1 
+Name estado_atual.Libera_prod2 estado_atual.Libera_troco2 estado_atual.Cal_troco2 estado_atual.Soma2 estado_atual.Espera2 estado_atual.Libera_prod1 estado_atual.Libera_troco1 estado_atual.Cal_troco1 estado_atual.Soma1 estado_atual.Espera1 estado_atual.Inicial 
+estado_atual.Inicial 0 0 0 0 0 0 0 0 0 0 0 
+estado_atual.Espera1 0 0 0 0 0 0 0 0 0 1 1 
+estado_atual.Soma1 0 0 0 0 0 0 0 0 1 0 1 
+estado_atual.Cal_troco1 0 0 0 0 0 0 0 1 0 0 1 
+estado_atual.Libera_troco1 0 0 0 0 0 0 1 0 0 0 1 
+estado_atual.Libera_prod1 0 0 0 0 0 1 0 0 0 0 1 
+estado_atual.Espera2 0 0 0 0 1 0 0 0 0 0 1 
+estado_atual.Soma2 0 0 0 1 0 0 0 0 0 0 1 
+estado_atual.Cal_troco2 0 0 1 0 0 0 0 0 0 0 1 
+estado_atual.Libera_troco2 0 1 0 0 0 0 0 0 0 0 1 
+estado_atual.Libera_prod2 1 0 0 0 0 0 0 0 0 0 1 

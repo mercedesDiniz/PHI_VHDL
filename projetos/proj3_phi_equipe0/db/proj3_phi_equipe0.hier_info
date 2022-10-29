@@ -2,19 +2,24 @@
 clk => estado_atual~1.DATAIN
 m => prox_estado.OUTPUTSELECT
 m => prox_estado.OUTPUTSELECT
-m => prox_estado.Soma_p1.DATAB
-m => prox_estado.Soma_p2.DATAB
+m => prox_estado.Soma1.DATAB
+m => prox_estado.Soma2.DATAB
 m => logica_proximo_estado.IN0
 b1 => logica_proximo_estado.IN0
 b1 => logica_proximo_estado.IN0
 b2 => logica_proximo_estado.IN1
 b2 => logica_proximo_estado.IN1
-nt => logica_proximo_estado.IN1
-f1 <= f1.DB_MAX_OUTPUT_PORT_TYPE
-f2 <= f2.DB_MAX_OUTPUT_PORT_TYPE
-tot_ld <= tot_ld.DB_MAX_OUTPUT_PORT_TYPE
-tot_clr <= tot_clr.DB_MAX_OUTPUT_PORT_TYPE
-vt_ld <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
-vt_clr <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+resul_pag => logica_proximo_estado.IN1
+resul_troco => prox_estado.Libera_troco1.DATAB
+resul_troco => prox_estado.Libera_troco2.DATAB
+resul_troco => prox_estado.Libera_prod1.DATAB
+resul_troco => prox_estado.Libera_prod2.DATAB
+f1 << f1.DB_MAX_OUTPUT_PORT_TYPE
+f2 << f2.DB_MAX_OUTPUT_PORT_TYPE
+tot_ld << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+tot_clr << WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+vt_ld << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+vt_clr << WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+nt << nt.DB_MAX_OUTPUT_PORT_TYPE
 
 

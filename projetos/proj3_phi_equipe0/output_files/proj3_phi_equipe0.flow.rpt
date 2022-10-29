@@ -1,5 +1,5 @@
 Flow report for proj3_phi_equipe0
-Fri Oct 28 17:20:46 2022
+Sat Oct 29 13:59:08 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -41,7 +41,7 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Fri Oct 28 17:20:46 2022       ;
+; Flow Status                     ; Successful - Sat Oct 29 13:59:08 2022       ;
 ; Quartus Prime Version           ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; proj3_phi_equipe0                           ;
 ; Top-level Entity Name           ; BC                                          ;
@@ -49,8 +49,8 @@ agreement for further details.
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 9                                           ;
-; Total pins                      ; 11                                          ;
+; Total registers                 ; 11                                          ;
+; Total pins                      ; 13                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -68,7 +68,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/28/2022 17:20:34 ;
+; Start date & time ; 10/29/2022 13:58:57 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; proj3_phi_equipe0   ;
 +-------------------+---------------------+
@@ -79,7 +79,7 @@ agreement for further details.
 +-------------------------------------+----------------------------------------+-------------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value     ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+-------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 33382245999165.166698843420044         ; --                ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 251413962923800.166706273706516        ; --                ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --                ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>            ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --                ; --          ; eda_simulation ;
@@ -88,6 +88,8 @@ agreement for further details.
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                ; BC          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                ; BC          ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                ; BC          ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --                ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --                ; --          ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                ; --          ; --             ;
 ; TOP_LEVEL_ENTITY                    ; BC                                     ; proj3_phi_equipe0 ; --          ; --             ;
 +-------------------------------------+----------------------------------------+-------------------+-------------+----------------+
@@ -98,8 +100,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4869 MB             ; 00:00:19                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:19                           ;
+; Analysis & Synthesis ; 00:00:11     ; 1.0                     ; 4846 MB             ; 00:00:24                           ;
+; Total                ; 00:00:11     ; --                      ; --                  ; 00:00:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -108,7 +110,7 @@ agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-C5V0IDL  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-46KGFII  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
