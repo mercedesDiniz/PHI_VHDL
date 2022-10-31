@@ -25,7 +25,9 @@ architecture comportamento of testbench is
 	signal VT : std_logic_vector(7 downto 0); 
 	constant preco_r1 :  std_logic_vector(0 to 7) := "01100100"; -- custo do produto 1 - R$ 1 = 100 centavos 
 	constant preco_r2 :  std_logic_vector(0 to 7) := "11111010"; -- custo do produto 2 - R$ 2,50 = 250 centavos
-	constant m_valores : std_logic_vector(0 to 54) := "0101010101000001111111111011111111011000001111001100111";
+	constant m_valores : std_logic_vector(0 to 15) := "0101010101000001";
+	constant b1_valores : std_logic_vector(0 to 15) := "1010011000100110";
+	constant b2_valores : std_logic_vector(0 to 15) := "0011011010101010";
 	
 	signal valor_moeda : std_logic_vector(7 downto 0);
 	
@@ -55,7 +57,9 @@ begin -- Descrição do sistema
 		variable i: integer := 0;
 	begin
 		if rising_edge(Clk) then
-			M <= m_valores(i);			
+			M <= m_valores(i);
+			B1 <= b1_valores(i);
+			B2 <= b2_valores(i);
 			i := i + 1;
 			
 			if i = m_valores'length then

@@ -21,9 +21,9 @@ Vj@]jB5]nNej^7]lk1?j5k2
 !s100 `3I6h4UF?bhG7]`_eo@OH0
 Z6 OV;C;10.5b;63
 31
-Z7 !s110 1667082042
+Z7 !s110 1667253035
 !i10b 1
-Z8 !s108 1667082042.000000
+Z8 !s108 1667253035.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd|
 Z10 !s107 C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd|
 !i113 1
@@ -132,7 +132,7 @@ R25
 R11
 R12
 Etestbench
-Z26 w1667081993
+Z26 w1667253008
 R14
 R15
 R16
@@ -149,9 +149,9 @@ R6
 31
 R7
 !i10b 1
-Z29 !s108 1667082041.000000
-Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd|
-Z31 !s107 C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd|
+R8
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd|
+Z30 !s107 C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd|
 !i113 1
 R11
 R12
@@ -162,17 +162,17 @@ R16
 R2
 R3
 DEx4 work 9 testbench 0 22 8g_>@WHS6:m2X8P9A]PEH2
-l35
+l37
 L12
-VRdgFX79fDMO0?<z>[OXjN2
-!s100 HRda]Aa<?3Ri<^;LfG<_U1
+VmA^INS44e<13?B36XcezG0
+!s100 I@hJI6Ye2GT<JlH5U87Qn0
 R6
 31
 R7
 !i10b 1
+R8
 R29
 R30
-R31
 !i113 1
 R11
 R12
