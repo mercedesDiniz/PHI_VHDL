@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/simulation/modelsim
 Ebc
-Z1 w1667074149
+Z1 w1667421018
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
@@ -21,9 +21,9 @@ Vj@]jB5]nNej^7]lk1?j5k2
 !s100 `3I6h4UF?bhG7]`_eo@OH0
 Z6 OV;C;10.5b;63
 31
-Z7 !s110 1667253035
+Z7 !s110 1667421297
 !i10b 1
-Z8 !s108 1667253035.000000
+Z8 !s108 1667421297.000000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd|
 Z10 !s107 C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd|
 !i113 1
@@ -48,7 +48,7 @@ R10
 R11
 R12
 Ebo
-Z13 w1667075875
+Z13 w1667420945
 Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
 Z15 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 Z16 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
@@ -78,10 +78,10 @@ R16
 R2
 R3
 DEx4 work 2 bo 0 22 obXLSB<jKlY]ceozH=@2a3
-l30
+l29
 L18
-VEKo?9]N7T84Abe9kZ0RZc3
-!s100 G:[mDcY_O=CIL<Ol9C_QN1
+V]^j_o8]BVMeiI_4^BNM=B0
+!s100 3nYSLHRzY3o:TakEIS<;23
 R6
 31
 R7
@@ -93,7 +93,7 @@ R20
 R11
 R12
 Emaquina_de_vendas
-Z21 w1667075496
+Z21 w1667420710
 R2
 R3
 R0
@@ -132,7 +132,7 @@ R25
 R11
 R12
 Etestbench
-Z26 w1667253008
+Z26 w1667420622
 R14
 R15
 R16
@@ -149,9 +149,9 @@ R6
 31
 R7
 !i10b 1
-R8
-Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd|
-Z30 !s107 C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd|
+Z29 !s108 1667421296.000000
+Z30 !s90 -reportprogress|300|-93|-work|work|C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd|
+Z31 !s107 C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd|
 !i113 1
 R11
 R12
@@ -164,15 +164,15 @@ R3
 DEx4 work 9 testbench 0 22 8g_>@WHS6:m2X8P9A]PEH2
 l37
 L12
-VmA^INS44e<13?B36XcezG0
-!s100 I@hJI6Ye2GT<JlH5U87Qn0
+VYCeZ6=U5zGYMSB<ho3oVW2
+!s100 :1h7YLWZ>mdE>Lk7N@^PZ2
 R6
 31
 R7
 !i10b 1
-R8
 R29
 R30
+R31
 !i113 1
 R11
 R12

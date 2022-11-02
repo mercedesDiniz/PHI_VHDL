@@ -17,8 +17,7 @@ end BO;
 
 architecture comportamento of BO is
 	-- Região de declaração
-	--constant r1 :  std_logic_vector(0 to 7) := "01100100"; -- custo do produto 1 - R$ 1 = 100 centavos 
-	--constant r2 :  std_logic_vector(0 to 7) := "11111010"; -- custo do produto 2 - R$ 2,50 = 250 centavos
+
 	signal val_tot : std_logic_vector(7 downto 0);-- := (others => '0'); -- valor armazenado no registrador tot
 	signal val_vt : std_logic_vector(7 downto 0); -- valor armazenado no registrador vt
 	
@@ -29,7 +28,7 @@ architecture comportamento of BO is
 	
 begin -- Descrição do sistema
 
-	sel_produto : process(b1, b2)
+	sel_produto : process(b1, b2, r1, r2)
 	begin
 		if b1 = '1' and b2 = '0' then -- selecionou o produto 1
 			r <= r1;
@@ -40,7 +39,7 @@ begin -- Descrição do sistema
 		end if;
 	end process;
 	
-	registrador_tot : process(clk, tot_ld, tot_clr, resul_soma)
+	registrador_tot : process(clk, tot_ld, tot_clr, resul_soma, val_tot)
 	begin
 		if tot_clr = '1' then
 			val_tot <= (others => '0'); 	-- limpa
@@ -55,7 +54,7 @@ begin -- Descrição do sistema
 		end if;	
 	end process;
 	
-	registrador_vt : process(clk, vt_ld, vt_clr, resul_subt)
+	registrador_vt : process(clk, vt_ld, vt_clr, resul_subt, val_vt)
 	begin
 		if vt_clr = '1' then
 			val_vt <= (others => '0'); 	-- limpa
