@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:34:56 on Nov 02,2022
+# Start time: 19:13:40 on Nov 02,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -22,22 +22,22 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity testbench
 # -- Compiling architecture comportamento of testbench
-# End time: 17:34:57 on Nov 02,2022, Elapsed time: 0:00:01
+# End time: 19:13:40 on Nov 02,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:34:57 on Nov 02,2022
+# Start time: 19:13:40 on Nov 02,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity maquina_de_vendas
 # -- Compiling architecture comportamento of maquina_de_vendas
-# End time: 17:34:57 on Nov 02,2022, Elapsed time: 0:00:00
+# End time: 19:13:40 on Nov 02,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:34:57 on Nov 02,2022
+# Start time: 19:13:41 on Nov 02,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -47,23 +47,23 @@
 # -- Loading package STD_LOGIC_UNSIGNED
 # -- Compiling entity BO
 # -- Compiling architecture comportamento of BO
-# End time: 17:34:57 on Nov 02,2022, Elapsed time: 0:00:00
+# End time: 19:13:41 on Nov 02,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:34:57 on Nov 02,2022
+# Start time: 19:13:41 on Nov 02,2022
 # vcom -reportprogress 300 -93 -work work C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity BC
 # -- Compiling architecture comportamento of BC
-# End time: 17:34:57 on Nov 02,2022, Elapsed time: 0:00:00
+# End time: 19:13:41 on Nov 02,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 vsim work.testbench
 # vsim work.testbench 
-# Start time: 17:35:03 on Nov 02,2022
+# Start time: 19:13:44 on Nov 02,2022
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -78,37 +78,29 @@ add wave -position insertpoint  \
 sim:/testbench/Clk \
 sim:/testbench/M_aux \
 sim:/testbench/B1_aux \
-sim:/testbench/B2_aux \
 sim:/testbench/F1_aux \
-sim:/testbench/F2_aux \
 sim:/testbench/NT_aux \
 sim:/testbench/VT_aux \
 sim:/testbench/valor_moeda \
 sim:/testbench/preco_r1 \
-sim:/testbench/preco_r2 \
 sim:/testbench/m_valores \
-sim:/testbench/b1_valores \
-sim:/testbench/b2_valores
+sim:/testbench/b1_valores
 add wave -position insertpoint  \
 sim:/testbench/int_maquina_de_vendas/inst_BC/resul_pag \
 sim:/testbench/int_maquina_de_vendas/inst_BC/resul_troco \
+sim:/testbench/int_maquina_de_vendas/inst_BC/tot_ld \
+sim:/testbench/int_maquina_de_vendas/inst_BC/tot_clr \
+sim:/testbench/int_maquina_de_vendas/inst_BC/vt_ld \
+sim:/testbench/int_maquina_de_vendas/inst_BC/vt_clr \
 sim:/testbench/int_maquina_de_vendas/inst_BC/prox_estado \
 sim:/testbench/int_maquina_de_vendas/inst_BC/estado_atual
 add wave -position insertpoint  \
-sim:/testbench/int_maquina_de_vendas/inst_BO/tot_ld \
-sim:/testbench/int_maquina_de_vendas/inst_BO/tot_clr \
-sim:/testbench/int_maquina_de_vendas/inst_BO/vt_ld \
-sim:/testbench/int_maquina_de_vendas/inst_BO/vt_clr
-restart
-run
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/int_maquina_de_vendas/inst_BO
-# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/int_maquina_de_vendas/inst_BO
-run
-add wave -position insertpoint  \
+sim:/testbench/int_maquina_de_vendas/inst_BO/val_troco \
 sim:/testbench/int_maquina_de_vendas/inst_BO/val_tot \
-sim:/testbench/int_maquina_de_vendas/inst_BO/val_vt
+sim:/testbench/int_maquina_de_vendas/inst_BO/val_vt \
+sim:/testbench/int_maquina_de_vendas/inst_BO/r \
+sim:/testbench/int_maquina_de_vendas/inst_BO/resul_soma \
+sim:/testbench/int_maquina_de_vendas/inst_BO/resul_subt
 restart
 run
 # ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
@@ -117,3 +109,5 @@ run
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/int_maquina_de_vendas/inst_BO
 run
 run
+# End time: 19:28:30 on Nov 02,2022, Elapsed time: 0:14:46
+# Errors: 0, Warnings: 2
