@@ -152,7 +152,7 @@ begin -- Descrição do sistema
 			tot_ld <= '0';		
 			tot_clr <= '1';  	-- limpa registrador tot
 			vt_ld <= '0';		
-			vt_clr <= '1';	  	-- limp o registrador vt
+			vt_clr <= '0';	  	
 			nt <= '0';
 
 		-- Estados dodo a seleção do produto 2:
@@ -198,7 +198,7 @@ begin -- Descrição do sistema
 			tot_ld <= '0';		
 			tot_clr <= '1';  	-- limpa registrador tot
 			vt_ld <= '0';		
-			vt_clr <= '1';	  	-- limpa o registrador vt
+			vt_clr <= '0';	  	
 			nt <= '0';			
 			
 		end case;
