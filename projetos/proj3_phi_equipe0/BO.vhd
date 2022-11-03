@@ -77,7 +77,7 @@ begin -- Descrição do sistema
 	
 	verifica_pagamento : process(val_tot, r)
 	begin
-		if val_tot > r then 
+		if val_tot >= r then 
 			resul_pag <= '1';
 		else 
 			resul_pag <= '0';
