@@ -1,5 +1,5 @@
 Analysis & Elaboration report for proj3_phi_equipe0
-Wed Nov 02 19:13:30 2022
+Mon Nov 07 19:35:11 2022
 Quartus Prime Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +-----------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                              ;
 +-------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status ; Successful - Wed Nov 02 19:13:30 2022       ;
+; Analysis & Elaboration Status ; Successful - Mon Nov 07 19:35:11 2022       ;
 ; Quartus Prime Version         ; 17.0.0 Build 595 04/25/2017 SJ Lite Edition ;
 ; Revision Name                 ; proj3_phi_equipe0                           ;
 ; Top-level Entity Name         ; testbench                                   ;
@@ -184,7 +184,7 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 17.0.0 Build 595 04/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Nov 02 19:13:12 2022
+    Info: Processing started: Mon Nov 07 19:34:54 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off proj3_phi_equipe0 -c proj3_phi_equipe0 --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -209,10 +209,19 @@ Warning (10873): Using initial value X (don't care) for net "valor_moeda" at tes
 Info (12128): Elaborating entity "maquina_de_vendas" for hierarchy "maquina_de_vendas:int_maquina_de_vendas" File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/testbench.vhd Line: 40
 Info (12128): Elaborating entity "BC" for hierarchy "maquina_de_vendas:int_maquina_de_vendas|BC:inst_BC" File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 43
 Info (12128): Elaborating entity "BO" for hierarchy "maquina_de_vendas:int_maquina_de_vendas|BO:inst_BO" File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/maquina_de_vendas.vhd Line: 61
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 6 warnings
+Warning (10631): VHDL Process Statement warning at BO.vhd(57): inferring latch(es) for signal or variable "val_vt", which holds its previous value in one or more paths through the process File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 57
+Info (10041): Inferred latch for "val_vt[0]" at BO.vhd(57) File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 57
+Info (10041): Inferred latch for "val_vt[1]" at BO.vhd(57) File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 57
+Info (10041): Inferred latch for "val_vt[2]" at BO.vhd(57) File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 57
+Info (10041): Inferred latch for "val_vt[3]" at BO.vhd(57) File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 57
+Info (10041): Inferred latch for "val_vt[4]" at BO.vhd(57) File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 57
+Info (10041): Inferred latch for "val_vt[5]" at BO.vhd(57) File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 57
+Info (10041): Inferred latch for "val_vt[6]" at BO.vhd(57) File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 57
+Info (10041): Inferred latch for "val_vt[7]" at BO.vhd(57) File: C:/Users/User/Documents/UFPA/6 Semestre/Projeto de Hardware e Interfaceamento/PHI_VHDL/projetos/proj3_phi_equipe0/BO.vhd Line: 57
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 7 warnings
     Info: Peak virtual memory: 4837 megabytes
-    Info: Processing ended: Wed Nov 02 19:13:30 2022
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:40
+    Info: Processing ended: Mon Nov 07 19:35:11 2022
+    Info: Elapsed time: 00:00:17
+    Info: Total CPU time (on all processors): 00:00:38
 
 

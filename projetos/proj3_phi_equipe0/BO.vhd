@@ -54,12 +54,12 @@ begin -- Descrição do sistema
 		end if;	
 	end process;
 	
-	registrador_vt : process(clk, vt_ld, vt_clr, resul_subt, val_vt)
+	registrador_vt : process(val_tot, r, vt_ld, vt_clr, resul_subt, val_vt)
 	begin
 		if vt_clr = '1' then
 			val_vt <= (others => '0'); 	-- limpa
 			
-		elsif rising_edge(clk) then
+		elsif val_tot >= r then
 			if vt_ld = '1' then
 				val_vt <= resul_subt; 		-- salva
 			else

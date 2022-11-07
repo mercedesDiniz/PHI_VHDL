@@ -26,8 +26,8 @@ architecture comportamento of testbench is
 	constant preco_r1 :  std_logic_vector(0 to 7) := "01100100"; -- custo do produto 1 - R$ 1 = 100 centavos 
 	constant preco_r2 :  std_logic_vector(0 to 7) := "11111010"; -- custo do produto 2 - R$ 2,50 = 250 centavos
 	constant m_valores : std_logic_vector(0 to 15) := "0101010101000001";
-	constant b1_valores : std_logic_vector(0 to 15) := "1111111111111111";
-	constant b2_valores : std_logic_vector(0 to 15) := "0000000000000000";
+	constant b1_valores : std_logic_vector(0 to 15) := "0000000000000000";
+	constant b2_valores : std_logic_vector(0 to 15) := "1111111111111111";
 	
 	signal valor_moeda : std_logic_vector(7 downto 0);
 	

@@ -159,7 +159,7 @@ begin -- Descrição do sistema
 		when Espera2 =>
 			f1 <= '0';
 			f2 <= '0';
-			tot_ld <= '1';		-- habilita registrador tot
+			tot_ld <= '0';		-- habilita registrador tot
 			tot_clr <= '0';  
 			vt_ld <= '0';
 			vt_clr <= '1';	  	-- limpa registrador vt
@@ -177,7 +177,7 @@ begin -- Descrição do sistema
 		when Cal_troco2 =>
 			f1 <= '0';
 			f2 <= '0';
-			tot_ld <= '1';		-- habilita registrador tot
+			tot_ld <= '0';		-- habilita registrador tot
 			tot_clr <= '0';  
 			vt_ld <= '1';		-- habilita registrador vt
 			vt_clr <= '0';	  	
